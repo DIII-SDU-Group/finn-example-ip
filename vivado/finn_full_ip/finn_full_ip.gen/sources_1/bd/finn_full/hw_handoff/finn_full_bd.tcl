@@ -157,7 +157,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set s_axi_result [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_result ]
   set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {5} \
+   CONFIG.ADDR_WIDTH {16} \
    CONFIG.ARUSER_WIDTH {0} \
    CONFIG.AWUSER_WIDTH {0} \
    CONFIG.BUSER_WIDTH {0} \
@@ -234,10 +234,10 @@ proc create_root_design { parentCell } {
   set streamToFinn_0 [ create_bd_cell -type ip -vlnv DIII:hls:streamToFinn:1.0 streamToFinn_0 ]
 
   # Create interface connections
-  connect_bd_intf_net -intf_net finn_stitched_0_m_axis_output [get_bd_intf_pins fetch_finn_0/finn_stream_V] [get_bd_intf_pins finn_stitched_0/m_axis_output]
+  connect_bd_intf_net -intf_net finn_stitched_0_m_axis_0 [get_bd_intf_pins fetch_finn_0/finn_stream_V] [get_bd_intf_pins finn_stitched_0/m_axis_0]
   connect_bd_intf_net -intf_net s_axi_AXI_CPU_0_1 [get_bd_intf_ports s_axi_stream_to_finn] [get_bd_intf_pins streamToFinn_0/s_axi_AXI_CPU]
   connect_bd_intf_net -intf_net s_axi_AXI_CPU_1_1 [get_bd_intf_ports s_axi_result] [get_bd_intf_pins fetch_finn_0/s_axi_AXI_CPU]
-  connect_bd_intf_net -intf_net streamToFinn_0_stream_finn_V [get_bd_intf_pins finn_stitched_0/s_axis_input] [get_bd_intf_pins streamToFinn_0/stream_finn_V]
+  connect_bd_intf_net -intf_net streamToFinn_0_stream_finn_V [get_bd_intf_pins finn_stitched_0/s_axis_0] [get_bd_intf_pins streamToFinn_0/stream_finn_V]
 
   # Create port connections
   connect_bd_net -net Net [get_bd_ports clk] [get_bd_pins fetch_finn_0/ap_clk] [get_bd_pins finn_stitched_0/ap_clk] [get_bd_pins streamToFinn_0/ap_clk]

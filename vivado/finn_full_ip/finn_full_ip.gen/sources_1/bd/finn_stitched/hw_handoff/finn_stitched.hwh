@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb  7 16:53:26 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb  7 21:36:34 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="finn_stitched" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -200,32 +200,32 @@
         <CONNECTION INSTANCE="finn_ip_StreamingFIFO_0" PORT="ap_rst_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="7" NAME="s_axis_input_tdata" RIGHT="0" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TDATA">
+    <PORT DIR="I" LEFT="7" NAME="s_axis_0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="finn_ip_StreamingFIFO_0" PORT="in0_V_TDATA"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="s_axis_input_tvalid" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TVALID">
+    <PORT DIR="I" NAME="s_axis_0_tvalid" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TVALID">
       <CONNECTIONS>
         <CONNECTION INSTANCE="finn_ip_StreamingFIFO_0" PORT="in0_V_TVALID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="s_axis_input_tready" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TREADY">
+    <PORT DIR="O" NAME="s_axis_0_tready" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TREADY">
       <CONNECTIONS>
         <CONNECTION INSTANCE="finn_ip_StreamingFIFO_0" PORT="in0_V_TREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="m_axis_output_tvalid" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TVALID">
+    <PORT DIR="O" NAME="m_axis_0_tvalid" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TVALID">
       <CONNECTIONS>
         <CONNECTION INSTANCE="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9" PORT="out_V_TVALID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="m_axis_output_tready" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TREADY">
+    <PORT DIR="I" NAME="m_axis_0_tready" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TREADY">
       <CONNECTIONS>
         <CONNECTION INSTANCE="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9" PORT="out_V_TREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="m_axis_output_tdata" RIGHT="0" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TDATA">
+    <PORT DIR="O" LEFT="31" NAME="m_axis_0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9" PORT="out_V_TDATA"/>
       </CONNECTIONS>
@@ -233,7 +233,7 @@
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
-    <BUSINTERFACE BUSNAME="External_Interface_s_axis_input" NAME="s_axis_input" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_s_axis_0" NAME="s_axis_0" TYPE="TARGET">
       <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
       <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -248,12 +248,12 @@
       <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
       <PORTMAPS>
-        <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_input_tdata"/>
-        <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_input_tvalid"/>
-        <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_input_tready"/>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_0_tdata"/>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_0_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_0_tready"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V" NAME="m_axis_output" TYPE="INITIATOR">
+    <BUSINTERFACE BUSNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V" NAME="m_axis_0" TYPE="INITIATOR">
       <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
       <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -268,15 +268,15 @@
       <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
       <PORTMAPS>
-        <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_output_tvalid"/>
-        <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_output_tready"/>
-        <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_output_tdata"/>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_0_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_0_tready"/>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_0_tdata"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2112360422" FULLNAME="/finn_ip/ConvolutionInputGenerator_0" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_0" VLNV="xilinx.com:hls:ConvolutionInputGenerator_0:1.0">
+    <MODULE COREREVISION="2112366666" FULLNAME="/finn_ip/ConvolutionInputGenerator_0" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_0" VLNV="xilinx.com:hls:ConvolutionInputGenerator_0:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_0_0"/>
@@ -372,10 +372,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360421" FULLNAME="/finn_ip/ConvolutionInputGenerator_1" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_1" VLNV="xilinx.com:hls:ConvolutionInputGenerator_1:1.0">
+    <MODULE COREREVISION="2112366665" FULLNAME="/finn_ip/ConvolutionInputGenerator_1" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_1" VLNV="xilinx.com:hls:ConvolutionInputGenerator_1:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_1_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -468,10 +468,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360420" FULLNAME="/finn_ip/ConvolutionInputGenerator_2" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_2" VLNV="xilinx.com:hls:ConvolutionInputGenerator_2:1.0">
+    <MODULE COREREVISION="2112366665" FULLNAME="/finn_ip/ConvolutionInputGenerator_2" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_2" VLNV="xilinx.com:hls:ConvolutionInputGenerator_2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_2_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_2_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -564,7 +564,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360419" FULLNAME="/finn_ip/ConvolutionInputGenerator_3" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_3" VLNV="xilinx.com:hls:ConvolutionInputGenerator_3:1.0">
+    <MODULE COREREVISION="2112366664" FULLNAME="/finn_ip/ConvolutionInputGenerator_3" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_3" VLNV="xilinx.com:hls:ConvolutionInputGenerator_3:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_3_0"/>
@@ -660,7 +660,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360419" FULLNAME="/finn_ip/ConvolutionInputGenerator_4" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_4" VLNV="xilinx.com:hls:ConvolutionInputGenerator_4:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/ConvolutionInputGenerator_4" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_4" VLNV="xilinx.com:hls:ConvolutionInputGenerator_4:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_4_0"/>
@@ -756,10 +756,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/ConvolutionInputGenerator_5" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_5" VLNV="xilinx.com:hls:ConvolutionInputGenerator_5:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/ConvolutionInputGenerator_5" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_5" VLNV="xilinx.com:hls:ConvolutionInputGenerator_5:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_5_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_5_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -852,10 +852,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/ConvolutionInputGenerator_6" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_6" VLNV="xilinx.com:hls:ConvolutionInputGenerator_6:1.0">
+    <MODULE COREREVISION="2112366662" FULLNAME="/finn_ip/ConvolutionInputGenerator_6" HWVERSION="1.0" INSTANCE="finn_ip_ConvolutionInputGenerator_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_6" VLNV="xilinx.com:hls:ConvolutionInputGenerator_6:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_6_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_ConvolutionInputGenerator_6_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -948,7 +948,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360422" FULLNAME="/finn_ip/FMPadding_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_0" VLNV="xilinx.com:hls:FMPadding_Batch_0:1.0">
+    <MODULE COREREVISION="2112366666" FULLNAME="/finn_ip/FMPadding_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_0" VLNV="xilinx.com:hls:FMPadding_Batch_0:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_0_0"/>
@@ -1044,7 +1044,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360421" FULLNAME="/finn_ip/FMPadding_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_1" VLNV="xilinx.com:hls:FMPadding_Batch_1:1.0">
+    <MODULE COREREVISION="2112366666" FULLNAME="/finn_ip/FMPadding_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_1" VLNV="xilinx.com:hls:FMPadding_Batch_1:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_1_0"/>
@@ -1140,10 +1140,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360420" FULLNAME="/finn_ip/FMPadding_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_2" VLNV="xilinx.com:hls:FMPadding_Batch_2:1.0">
+    <MODULE COREREVISION="2112366665" FULLNAME="/finn_ip/FMPadding_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_2" VLNV="xilinx.com:hls:FMPadding_Batch_2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_2_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_2_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -1236,10 +1236,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360420" FULLNAME="/finn_ip/FMPadding_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_3" VLNV="xilinx.com:hls:FMPadding_Batch_3:1.0">
+    <MODULE COREREVISION="2112366664" FULLNAME="/finn_ip/FMPadding_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_3" VLNV="xilinx.com:hls:FMPadding_Batch_3:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_3_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_3_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -1332,7 +1332,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360419" FULLNAME="/finn_ip/FMPadding_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_4" VLNV="xilinx.com:hls:FMPadding_Batch_4:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/FMPadding_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_4" VLNV="xilinx.com:hls:FMPadding_Batch_4:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_4_0"/>
@@ -1428,10 +1428,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/FMPadding_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_5" VLNV="xilinx.com:hls:FMPadding_Batch_5:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/FMPadding_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_5" VLNV="xilinx.com:hls:FMPadding_Batch_5:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_5_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_5_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -1524,10 +1524,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/FMPadding_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_6" VLNV="xilinx.com:hls:FMPadding_Batch_6:1.0">
+    <MODULE COREREVISION="2112366662" FULLNAME="/finn_ip/FMPadding_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_FMPadding_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_6" VLNV="xilinx.com:hls:FMPadding_Batch_6:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_6_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_FMPadding_Batch_6_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -1620,10 +1620,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360430" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_0" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_0:1.0">
+    <MODULE COREREVISION="2112366675" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_0" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_0:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_0_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -1716,10 +1716,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360430" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_1" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_1:1.0">
+    <MODULE COREREVISION="2112366675" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_1" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_1:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_1_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -1812,7 +1812,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360429" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_10" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_10" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_10" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_10:1.0">
+    <MODULE COREREVISION="2112366673" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_10" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_10" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_10" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_10:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_10_0"/>
@@ -1908,10 +1908,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360429" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_11" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_11" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_11" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_11:1.0">
+    <MODULE COREREVISION="2112366673" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_11" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_11" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_11" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_11:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_11_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_11_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2004,10 +2004,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360428" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_12" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_12" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_12" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_12:1.0">
+    <MODULE COREREVISION="2112366673" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_12" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_12" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_12" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_12:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_12_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_12_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2100,10 +2100,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360428" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_13" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_13" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_13" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_13:1.0">
+    <MODULE COREREVISION="2112366673" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_13" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_13" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_13" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_13:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_13_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_13_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2196,7 +2196,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360428" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_14" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_14" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_14" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_14:1.0">
+    <MODULE COREREVISION="2112366673" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_14" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_14" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_14" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_14:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_14_0"/>
@@ -2292,10 +2292,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360428" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_15" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_15" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_15" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_15:1.0">
+    <MODULE COREREVISION="2112366672" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_15" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_15" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_15" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_15:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_15_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_15_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2388,10 +2388,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360428" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_16" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_16" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_16" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_16:1.0">
+    <MODULE COREREVISION="2112366672" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_16" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_16" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_16" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_16:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_16_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_16_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2484,10 +2484,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360427" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_17" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_17" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_17" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_17:1.0">
+    <MODULE COREREVISION="2112366672" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_17" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_17" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_17" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_17:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_17_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_17_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2580,10 +2580,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360427" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_18" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_18" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_18" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_18:1.0">
+    <MODULE COREREVISION="2112366672" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_18" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_18" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_18" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_18:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_18_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_18_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2676,10 +2676,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360427" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_19" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_19" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_19" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_19:1.0">
+    <MODULE COREREVISION="2112366672" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_19" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_19" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_19" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_19:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_19_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_19_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2772,10 +2772,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360430" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_2" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_2:1.0">
+    <MODULE COREREVISION="2112366675" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_2" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_2_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_2_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2868,10 +2868,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360427" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_20" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_20" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_20" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_20:1.0">
+    <MODULE COREREVISION="2112366671" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_20" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_20" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_20" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_20:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_20_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_20_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2964,10 +2964,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360427" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_21" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_21" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_21" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_21:1.0">
+    <MODULE COREREVISION="2112366671" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_21" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_21" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_21" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_21:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_21_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_21_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3060,10 +3060,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360426" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_22" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_22" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_22" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_22:1.0">
+    <MODULE COREREVISION="2112366671" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_22" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_22" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_22" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_22:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_22_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_22_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3156,10 +3156,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360426" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_23" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_23" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_23" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_23:1.0">
+    <MODULE COREREVISION="2112366671" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_23" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_23" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_23" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_23:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_23_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_23_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3252,10 +3252,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360426" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_24" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_24" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_24" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_24:1.0">
+    <MODULE COREREVISION="2112366671" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_24" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_24" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_24" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_24:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_24_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_24_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3348,10 +3348,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360430" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_3" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_3:1.0">
+    <MODULE COREREVISION="2112366675" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_3" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_3:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_3_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_3_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3444,10 +3444,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360430" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_4" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_4:1.0">
+    <MODULE COREREVISION="2112366674" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_4" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_4:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_4_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_4_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3540,10 +3540,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360430" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_5" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_5:1.0">
+    <MODULE COREREVISION="2112366674" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_5" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_5:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_5_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_5_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3636,10 +3636,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360429" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_6" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_6:1.0">
+    <MODULE COREREVISION="2112366674" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_6" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_6:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_6_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_6_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3732,10 +3732,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360429" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_7" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_7" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_7" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_7:1.0">
+    <MODULE COREREVISION="2112366674" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_7" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_7" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_7" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_7:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_7_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_7_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3828,10 +3828,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360429" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_8" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_8" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_8:1.0">
+    <MODULE COREREVISION="2112366674" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_8" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_8" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_8:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_8_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_8_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3924,10 +3924,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360429" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_9" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_9" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_9" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_9:1.0">
+    <MODULE COREREVISION="2112366673" FULLNAME="/finn_ip/StreamingDataWidthConverter_Batch_9" HWVERSION="1.0" INSTANCE="finn_ip_StreamingDataWidthConverter_Batch_9" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_9" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_9:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_9_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingDataWidthConverter_Batch_9_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -4020,10 +4020,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360422" FULLNAME="/finn_ip/StreamingFCLayer_Batch_0/StreamingFCLayer_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_0_StreamingFCLayer_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_0" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_0:1.0">
+    <MODULE COREREVISION="2112366666" FULLNAME="/finn_ip/StreamingFCLayer_Batch_0/StreamingFCLayer_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_0_StreamingFCLayer_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_0" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_0:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_0_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -4158,7 +4158,7 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="9"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="192"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_0_hf84_wbu/"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_0_9pwi1272/"/>
         <PARAMETER NAME="RAM_STYLE" VALUE="distributed"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="192"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
@@ -4305,10 +4305,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360422" FULLNAME="/finn_ip/StreamingFCLayer_Batch_1/StreamingFCLayer_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_1_StreamingFCLayer_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_1" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_1:1.0">
+    <MODULE COREREVISION="2112366667" FULLNAME="/finn_ip/StreamingFCLayer_Batch_1/StreamingFCLayer_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_1_StreamingFCLayer_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_1" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_1:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_1_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -4443,7 +4443,7 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="36"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="1024"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_1_r0htqf01/"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_1_6ej7r66t/"/>
         <PARAMETER NAME="RAM_STYLE" VALUE="distributed"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="1024"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
@@ -4464,7 +4464,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="13"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_1_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_1_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -4590,10 +4590,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360421" FULLNAME="/finn_ip/StreamingFCLayer_Batch_2/StreamingFCLayer_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_2_StreamingFCLayer_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_2" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_2:1.0">
+    <MODULE COREREVISION="2112366665" FULLNAME="/finn_ip/StreamingFCLayer_Batch_2/StreamingFCLayer_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_2_StreamingFCLayer_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_2" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_2_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_2_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -4728,7 +4728,7 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="144"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="512"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_2_3rnousoc/"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_2_ow4ljsfb/"/>
         <PARAMETER NAME="RAM_STYLE" VALUE="distributed"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="512"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
@@ -4749,7 +4749,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="14"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_2_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_2_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -4875,10 +4875,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360420" FULLNAME="/finn_ip/StreamingFCLayer_Batch_3/StreamingFCLayer_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_3_StreamingFCLayer_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_3" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_3:1.0">
+    <MODULE COREREVISION="2112366664" FULLNAME="/finn_ip/StreamingFCLayer_Batch_3/StreamingFCLayer_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_3_StreamingFCLayer_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_3" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_3:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_3_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_3_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -5013,8 +5013,8 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="576"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="256"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_3_ffmkj9yy/"/>
-        <PARAMETER NAME="RAM_STYLE" VALUE="distributed"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_3_h7_9bcs3/"/>
+        <PARAMETER NAME="RAM_STYLE" VALUE="block"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="256"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
         <PARAMETER NAME="STRM2_WIDTH" VALUE="32"/>
@@ -5034,7 +5034,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="15"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_3_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_3_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -5160,7 +5160,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360419" FULLNAME="/finn_ip/StreamingFCLayer_Batch_4/StreamingFCLayer_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_4_StreamingFCLayer_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_4" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_4:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/StreamingFCLayer_Batch_4/StreamingFCLayer_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_4_StreamingFCLayer_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_4" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_4:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_4_0"/>
@@ -5298,8 +5298,8 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="2304"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_4_1dot0gc5/"/>
-        <PARAMETER NAME="RAM_STYLE" VALUE="distributed"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_4_hh27_ah5/"/>
+        <PARAMETER NAME="RAM_STYLE" VALUE="block"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="128"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
         <PARAMETER NAME="STRM2_WIDTH" VALUE="32"/>
@@ -5319,7 +5319,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_4_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_4_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -5445,10 +5445,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/StreamingFCLayer_Batch_5/StreamingFCLayer_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_5_StreamingFCLayer_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_5" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_5:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/StreamingFCLayer_Batch_5/StreamingFCLayer_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_5_StreamingFCLayer_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_5" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_5:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_5_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_5_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -5583,8 +5583,8 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="9216"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_5__3j7998n/"/>
-        <PARAMETER NAME="RAM_STYLE" VALUE="distributed"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_5_1up71wmn/"/>
+        <PARAMETER NAME="RAM_STYLE" VALUE="block"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="64"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
         <PARAMETER NAME="STRM2_WIDTH" VALUE="32"/>
@@ -5604,7 +5604,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="17"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_5_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_5_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -5730,10 +5730,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/StreamingFCLayer_Batch_6/StreamingFCLayer_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_6_StreamingFCLayer_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_6" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_6:1.0">
+    <MODULE COREREVISION="2112366662" FULLNAME="/finn_ip/StreamingFCLayer_Batch_6/StreamingFCLayer_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_6_StreamingFCLayer_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_6" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_6:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_6_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_6_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -5868,7 +5868,7 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="18432"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_6_jnwv2iom/"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_6_ybhn0y4h/"/>
         <PARAMETER NAME="RAM_STYLE" VALUE="block"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="32"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
@@ -5889,7 +5889,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="17"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_6_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_6_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -6015,10 +6015,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360417" FULLNAME="/finn_ip/StreamingFCLayer_Batch_7/StreamingFCLayer_Batch_7" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_7_StreamingFCLayer_Batch_7" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_7" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_7:1.0">
+    <MODULE COREREVISION="2112366662" FULLNAME="/finn_ip/StreamingFCLayer_Batch_7/StreamingFCLayer_Batch_7" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_7_StreamingFCLayer_Batch_7" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_7" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_7:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_7_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_7_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -6153,7 +6153,7 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="65536"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_7_abts7hbd/"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_7_9uriuj_q/"/>
         <PARAMETER NAME="RAM_STYLE" VALUE="block"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="8"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
@@ -6174,7 +6174,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="18"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_7_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_7_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -6300,10 +6300,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360417" FULLNAME="/finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_8_StreamingFCLayer_Batch_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_8" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_8:1.0">
+    <MODULE COREREVISION="2112366662" FULLNAME="/finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_8_StreamingFCLayer_Batch_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_8" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_8:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_8_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_8_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -6438,7 +6438,7 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="8192"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7z6hf082/"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_1q7ml8m0/"/>
         <PARAMETER NAME="RAM_STYLE" VALUE="block"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="8"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
@@ -6585,10 +6585,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360426" FULLNAME="/finn_ip/StreamingFCLayer_Batch_9/StreamingFCLayer_Batch_9" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_9" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_9:1.0">
+    <MODULE COREREVISION="2112366670" FULLNAME="/finn_ip/StreamingFCLayer_Batch_9/StreamingFCLayer_Batch_9" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_9" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_9:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_9_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_9_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -6639,17 +6639,17 @@
         </PORT>
         <PORT DIR="O" NAME="out_V_TVALID" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="finn_stitched_imp" PORT="m_axis_output_tvalid"/>
+            <CONNECTION INSTANCE="finn_stitched_imp" PORT="m_axis_0_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="out_V_TREADY" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="finn_stitched_imp" PORT="m_axis_output_tready"/>
+            <CONNECTION INSTANCE="finn_stitched_imp" PORT="m_axis_0_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="out_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="finn_ip_StreamingFCLayer_Batch_9_StreamingFCLayer_Batch_9_out_V_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="finn_stitched_imp" PORT="m_axis_output_tdata"/>
+            <CONNECTION INSTANCE="finn_stitched_imp" PORT="m_axis_0_tdata"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6723,7 +6723,7 @@
         <PARAMETER NAME="NSTREAMS" VALUE="1"/>
         <PARAMETER NAME="MEM_DEPTH" VALUE="64"/>
         <PARAMETER NAME="MEM_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_9_vfypsnrg/"/>
+        <PARAMETER NAME="MEM_INIT" VALUE="/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_9_m1x02cw7/"/>
         <PARAMETER NAME="RAM_STYLE" VALUE="block"/>
         <PARAMETER NAME="STRM0_WIDTH" VALUE="16"/>
         <PARAMETER NAME="STRM1_WIDTH" VALUE="32"/>
@@ -6744,7 +6744,7 @@
         <PARAMETER NAME="STRM4_OFFSET" VALUE="9216"/>
         <PARAMETER NAME="STRM5_OFFSET" VALUE="11520"/>
         <PARAMETER NAME="AXILITE_ADDR_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_9_wstrm_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFCLayer_Batch_9_wstrm_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -6873,7 +6873,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_0" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_0" VLNV="xilinx.com:hls:StreamingFIFO_0:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -6890,17 +6890,17 @@
         <PORT DIR="O" LEFT="0" NAME="count" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="7" NAME="in0_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="finn_stitched_imp" PORT="s_axis_input_tdata"/>
+            <CONNECTION INSTANCE="finn_stitched_imp" PORT="s_axis_0_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="in0_V_TVALID" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="finn_stitched_imp" PORT="s_axis_input_tvalid"/>
+            <CONNECTION INSTANCE="finn_stitched_imp" PORT="s_axis_0_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="in0_V_TREADY" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_in0_V_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="finn_stitched_imp" PORT="s_axis_input_tready"/>
+            <CONNECTION INSTANCE="finn_stitched_imp" PORT="s_axis_0_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="out_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="finn_ip_StreamingFIFO_0_out_V_TDATA">
@@ -6920,7 +6920,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="External_Interface_s_axis_input" NAME="in0_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_s_axis_0" NAME="in0_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -6965,7 +6965,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_11" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_11" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_11" VLNV="xilinx.com:hls:StreamingFIFO_11:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_11_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_11_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -7057,7 +7057,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_14" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_14" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_14" VLNV="xilinx.com:hls:StreamingFIFO_14:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_14_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_14_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -7149,7 +7149,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_15" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_15" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_15" VLNV="xilinx.com:hls:StreamingFIFO_15:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_15_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_15_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -7283,7 +7283,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_4"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_20"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -7374,7 +7374,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_19" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_19" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_19" VLNV="xilinx.com:hls:StreamingFIFO_19:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_19_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_19_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -7508,7 +7508,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_16"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -7599,7 +7599,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_22" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_22" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_22" VLNV="xilinx.com:hls:StreamingFIFO_22:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_22_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_22_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -7733,7 +7733,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_5"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_21"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -7866,7 +7866,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_6"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_22"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -7957,7 +7957,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_27" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_27" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_27" VLNV="xilinx.com:hls:StreamingFIFO_27:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_27_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_27_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -8049,7 +8049,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_30" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_30" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_30" VLNV="xilinx.com:hls:StreamingFIFO_30:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_30_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_30_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -8183,7 +8183,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_7"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_23"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -8316,7 +8316,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_8"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_24"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -8449,7 +8449,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_9"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_25"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -8540,7 +8540,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_37" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_37" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_37" VLNV="xilinx.com:hls:StreamingFIFO_37:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_37_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_37_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -8674,7 +8674,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_10"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_26"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -8807,7 +8807,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_11"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_27"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -8940,7 +8940,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_17"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -9073,7 +9073,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_12"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_28"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -9206,7 +9206,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_13"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_29"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -9339,7 +9339,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_14"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_30"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -9472,7 +9472,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_15"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_31"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -9563,7 +9563,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_5" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_5" VLNV="xilinx.com:hls:StreamingFIFO_5:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_5_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_5_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -9655,7 +9655,7 @@
     <MODULE COREREVISION="2" FULLNAME="/finn_ip/StreamingFIFO_6" HWVERSION="1.0" INSTANCE="finn_ip_StreamingFIFO_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_6" VLNV="xilinx.com:hls:StreamingFIFO_6:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_6_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingFIFO_6_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -9789,7 +9789,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_18"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -9922,7 +9922,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_3"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_fifo_19"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -10010,10 +10010,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360421" FULLNAME="/finn_ip/StreamingMaxPool_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_0" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_0:1.0">
+    <MODULE COREREVISION="2112366666" FULLNAME="/finn_ip/StreamingMaxPool_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_0" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_0:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_0_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -10106,10 +10106,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360420" FULLNAME="/finn_ip/StreamingMaxPool_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_1" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_1:1.0">
+    <MODULE COREREVISION="2112366665" FULLNAME="/finn_ip/StreamingMaxPool_Batch_1" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_1" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_1:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_1_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -10202,10 +10202,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360420" FULLNAME="/finn_ip/StreamingMaxPool_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_2" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_2:1.0">
+    <MODULE COREREVISION="2112366664" FULLNAME="/finn_ip/StreamingMaxPool_Batch_2" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_2" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_2_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_2_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -10298,7 +10298,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360419" FULLNAME="/finn_ip/StreamingMaxPool_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_3" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_3:1.0">
+    <MODULE COREREVISION="2112366664" FULLNAME="/finn_ip/StreamingMaxPool_Batch_3" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_3" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_3:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_3_0"/>
@@ -10394,10 +10394,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/StreamingMaxPool_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_4" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_4:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/StreamingMaxPool_Batch_4" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_4" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_4:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_4_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_4_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -10490,10 +10490,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360418" FULLNAME="/finn_ip/StreamingMaxPool_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_5" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_5:1.0">
+    <MODULE COREREVISION="2112366663" FULLNAME="/finn_ip/StreamingMaxPool_Batch_5" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_5" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_5:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_5_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_5_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -10586,10 +10586,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360417" FULLNAME="/finn_ip/StreamingMaxPool_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_6" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_6:1.0">
+    <MODULE COREREVISION="2112366662" FULLNAME="/finn_ip/StreamingMaxPool_Batch_6" HWVERSION="1.0" INSTANCE="finn_ip_StreamingMaxPool_Batch_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_6" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_6:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_6_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_StreamingMaxPool_Batch_6_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -10682,10 +10682,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112360425" FULLNAME="/finn_ip/Thresholding_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_Thresholding_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Thresholding_Batch_0" VLNV="xilinx.com:hls:Thresholding_Batch_0:1.0">
+    <MODULE COREREVISION="2112366669" FULLNAME="/finn_ip/Thresholding_Batch_0" HWVERSION="1.0" INSTANCE="finn_ip_Thresholding_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Thresholding_Batch_0" VLNV="xilinx.com:hls:Thresholding_Batch_0:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_Thresholding_Batch_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="finn_stitched_Thresholding_Batch_0_1"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>

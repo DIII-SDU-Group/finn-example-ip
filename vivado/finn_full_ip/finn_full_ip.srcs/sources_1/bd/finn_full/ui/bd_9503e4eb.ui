@@ -1,29 +1,29 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.961373",
-   "Default View_TopLeft":"-199,-75",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-502,-244",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port s_axi_stream_to_finn -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
-preplace port s_axi_result -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port s_axi_stream_to_finn -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace port s_axi_result -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
 preplace port interrupt_stream_to_finn -pg 1 -lvl 3 -x 740 -y 310 -defaultsOSRD
 preplace port interrupt_result -pg 1 -lvl 3 -x 740 -y 90 -defaultsOSRD
-preplace port clk -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
-preplace port rst_n -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
-preplace inst finn_stitched_0 -pg 1 -lvl 1 -x 190 -y 140 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -10 -y 160 -defaultsOSRD
 preplace inst fetch_finn_0 -pg 1 -lvl 2 -x 540 -y 90 -defaultsOSRD
 preplace inst streamToFinn_0 -pg 1 -lvl 2 -x 540 -y 300 -defaultsOSRD
-preplace netloc Net 1 0 2 30 290 360
-preplace netloc Net1 1 0 2 20 300 350
+preplace inst finn_stitched_0 -pg 1 -lvl 1 -x 150 -y 150 -defaultsOSRD
+preplace netloc Net 1 0 2 20 70 280
+preplace netloc Net1 1 0 2 10 50 290
 preplace netloc streamToFinn_0_interrupt 1 2 1 NJ 310
 preplace netloc fetch_finn_0_interrupt 1 2 1 NJ 90
-preplace netloc streamToFinn_0_stream_finn_V 1 0 3 40 220 NJ 220 720
-preplace netloc finn_stitched_0_m_axis_output 1 1 1 340 80n
-preplace netloc s_axi_AXI_CPU_0_1 1 0 2 NJ 280 NJ
-preplace netloc s_axi_AXI_CPU_1_1 1 0 2 NJ 60 NJ
-levelinfo -pg 1 0 190 540 740
-pagesize -pg 1 -db -bbox -sgen -200 0 970 380
+preplace netloc s_axi_AXI_CPU_1_1 1 0 2 NJ 60 N
+preplace netloc s_axi_AXI_CPU_0_1 1 0 2 NJ 280 N
+preplace netloc finn_stitched_0_m_axis_0 1 1 1 270 80n
+preplace netloc streamToFinn_0_stream_finn_V 1 0 3 30 230 300J 220 720
+levelinfo -pg 1 -10 150 540 740
+pagesize -pg 1 -db -bbox -sgen -210 -280 970 380
 "
 }
-
+0

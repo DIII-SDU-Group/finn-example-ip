@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Mon Feb  7 17:00:31 2022
+//Date        : Mon Feb  7 21:41:17 2022
 //Host        : nm running 64-bit Ubuntu 20.04.3 LTS
 //Command     : generate_target finn_full.bd
 //Design      : finn_full
@@ -53,47 +53,47 @@ module finn_full
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTERRUPT_RESULT INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTERRUPT_RESULT, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output interrupt_result;
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTERRUPT_STREAM_TO_FINN INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTERRUPT_STREAM_TO_FINN, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output interrupt_stream_to_finn;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rst_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_result, ADDR_WIDTH 5, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN finn_full_clk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [4:0]s_axi_result_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output s_axi_result_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input s_axi_result_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input [4:0]s_axi_result_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output s_axi_result_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input s_axi_result_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input s_axi_result_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output [1:0]s_axi_result_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output s_axi_result_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output [31:0]s_axi_result_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input s_axi_result_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output [1:0]s_axi_result_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output s_axi_result_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input [31:0]s_axi_result_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) output s_axi_result_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input [3:0]s_axi_result_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result " *) input s_axi_result_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_stream_to_finn, ADDR_WIDTH 14, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN finn_full_clk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [13:0]s_axi_stream_to_finn_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output s_axi_stream_to_finn_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input s_axi_stream_to_finn_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input [13:0]s_axi_stream_to_finn_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output s_axi_stream_to_finn_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input s_axi_stream_to_finn_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input s_axi_stream_to_finn_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output [1:0]s_axi_stream_to_finn_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output s_axi_stream_to_finn_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output [31:0]s_axi_stream_to_finn_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input s_axi_stream_to_finn_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output [1:0]s_axi_stream_to_finn_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output s_axi_stream_to_finn_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input [31:0]s_axi_stream_to_finn_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) output s_axi_stream_to_finn_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input [3:0]s_axi_stream_to_finn_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn " *) input s_axi_stream_to_finn_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_result, ADDR_WIDTH 16, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN finn_full_clk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [4:0]s_axi_result_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result ARREADY" *) output s_axi_result_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result ARVALID" *) input s_axi_result_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result AWADDR" *) input [4:0]s_axi_result_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result AWREADY" *) output s_axi_result_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result AWVALID" *) input s_axi_result_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result BREADY" *) input s_axi_result_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result BRESP" *) output [1:0]s_axi_result_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result BVALID" *) output s_axi_result_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result RDATA" *) output [31:0]s_axi_result_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result RREADY" *) input s_axi_result_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result RRESP" *) output [1:0]s_axi_result_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result RVALID" *) output s_axi_result_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result WDATA" *) input [31:0]s_axi_result_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result WREADY" *) output s_axi_result_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result WSTRB" *) input [3:0]s_axi_result_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_result WVALID" *) input s_axi_result_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_stream_to_finn, ADDR_WIDTH 14, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN finn_full_clk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [13:0]s_axi_stream_to_finn_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn ARREADY" *) output s_axi_stream_to_finn_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn ARVALID" *) input s_axi_stream_to_finn_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn AWADDR" *) input [13:0]s_axi_stream_to_finn_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn AWREADY" *) output s_axi_stream_to_finn_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn AWVALID" *) input s_axi_stream_to_finn_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn BREADY" *) input s_axi_stream_to_finn_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn BRESP" *) output [1:0]s_axi_stream_to_finn_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn BVALID" *) output s_axi_stream_to_finn_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn RDATA" *) output [31:0]s_axi_stream_to_finn_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn RREADY" *) input s_axi_stream_to_finn_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn RRESP" *) output [1:0]s_axi_stream_to_finn_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn RVALID" *) output s_axi_stream_to_finn_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn WDATA" *) input [31:0]s_axi_stream_to_finn_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn WREADY" *) output s_axi_stream_to_finn_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn WSTRB" *) input [3:0]s_axi_stream_to_finn_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_stream_to_finn WVALID" *) input s_axi_stream_to_finn_wvalid;
 
   wire Net;
   wire Net1;
   wire fetch_finn_0_interrupt;
-  wire [31:0]finn_stitched_0_m_axis_output_TDATA;
-  wire finn_stitched_0_m_axis_output_TREADY;
-  wire finn_stitched_0_m_axis_output_TVALID;
+  wire [31:0]finn_stitched_0_m_axis_0_TDATA;
+  wire finn_stitched_0_m_axis_0_TREADY;
+  wire finn_stitched_0_m_axis_0_TVALID;
   wire [13:0]s_axi_AXI_CPU_0_1_ARADDR;
   wire s_axi_AXI_CPU_0_1_ARREADY;
   wire s_axi_AXI_CPU_0_1_ARVALID;
@@ -174,9 +174,9 @@ module finn_full
   finn_full_fetch_finn_0_0 fetch_finn_0
        (.ap_clk(Net),
         .ap_rst_n(Net1),
-        .finn_stream_V_TDATA(finn_stitched_0_m_axis_output_TDATA),
-        .finn_stream_V_TREADY(finn_stitched_0_m_axis_output_TREADY),
-        .finn_stream_V_TVALID(finn_stitched_0_m_axis_output_TVALID),
+        .finn_stream_V_TDATA(finn_stitched_0_m_axis_0_TDATA),
+        .finn_stream_V_TREADY(finn_stitched_0_m_axis_0_TREADY),
+        .finn_stream_V_TVALID(finn_stitched_0_m_axis_0_TVALID),
         .interrupt(fetch_finn_0_interrupt),
         .s_axi_AXI_CPU_ARADDR(s_axi_AXI_CPU_1_1_ARADDR),
         .s_axi_AXI_CPU_ARREADY(s_axi_AXI_CPU_1_1_ARREADY),
@@ -195,15 +195,15 @@ module finn_full
         .s_axi_AXI_CPU_WREADY(s_axi_AXI_CPU_1_1_WREADY),
         .s_axi_AXI_CPU_WSTRB(s_axi_AXI_CPU_1_1_WSTRB),
         .s_axi_AXI_CPU_WVALID(s_axi_AXI_CPU_1_1_WVALID));
-  finn_full_finn_stitched_0_0 finn_stitched_0
+  finn_full_finn_stitched_0_1 finn_stitched_0
        (.ap_clk(Net),
         .ap_rst_n(Net1),
-        .m_axis_output_tdata(finn_stitched_0_m_axis_output_TDATA),
-        .m_axis_output_tready(finn_stitched_0_m_axis_output_TREADY),
-        .m_axis_output_tvalid(finn_stitched_0_m_axis_output_TVALID),
-        .s_axis_input_tdata(streamToFinn_0_stream_finn_V_TDATA),
-        .s_axis_input_tready(streamToFinn_0_stream_finn_V_TREADY),
-        .s_axis_input_tvalid(streamToFinn_0_stream_finn_V_TVALID));
+        .m_axis_0_tdata(finn_stitched_0_m_axis_0_TDATA),
+        .m_axis_0_tready(finn_stitched_0_m_axis_0_TREADY),
+        .m_axis_0_tvalid(finn_stitched_0_m_axis_0_TVALID),
+        .s_axis_0_tdata(streamToFinn_0_stream_finn_V_TDATA),
+        .s_axis_0_tready(streamToFinn_0_stream_finn_V_TREADY),
+        .s_axis_0_tvalid(streamToFinn_0_stream_finn_V_TVALID));
   finn_full_streamToFinn_0_0 streamToFinn_0
        (.ap_clk(Net),
         .ap_rst_n(Net1),

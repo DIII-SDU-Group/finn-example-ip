@@ -37,24 +37,24 @@
 						"WVALID": { "actual": "s_axi_AXI_CPU_WVALID"}
 					}
 				},
-				"/finn_stitched_0/m_axis_output": {
+				"/finn_stitched_0/m_axis_0": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "m_axis_output_tdata[31:0]"},
-						"TREADY": { "actual": "m_axis_output_tready"},
-						"TVALID": { "actual": "m_axis_output_tvalid"}
+						"TDATA": { "actual": "m_axis_0_tdata[31:0]"},
+						"TREADY": { "actual": "m_axis_0_tready"},
+						"TVALID": { "actual": "m_axis_0_tvalid"}
 					}
 				},
-				"/finn_stitched_0/s_axis_input": {
+				"/finn_stitched_0/s_axis_0": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "s_axis_input_tdata[7:0]"},
-						"TREADY": { "actual": "s_axis_input_tready"},
-						"TVALID": { "actual": "s_axis_input_tvalid"}
+						"TDATA": { "actual": "s_axis_0_tdata[7:0]"},
+						"TREADY": { "actual": "s_axis_0_tready"},
+						"TVALID": { "actual": "s_axis_0_tvalid"}
 					}
 				},
 				"/streamToFinn_0/s_axi_AXI_CPU": {

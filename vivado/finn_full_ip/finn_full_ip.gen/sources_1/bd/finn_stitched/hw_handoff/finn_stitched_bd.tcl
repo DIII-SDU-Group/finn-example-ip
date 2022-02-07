@@ -1196,7 +1196,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_9 { parentCell nameHier } {
   set StreamingFCLayer_Batch_9_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_9_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {64} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_9_vfypsnrg/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_9_m1x02cw7/} \
    CONFIG.MEM_WIDTH {16} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {block} \
@@ -1269,7 +1269,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_8 { parentCell nameHier } {
   set StreamingFCLayer_Batch_8_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_8_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {8192} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7z6hf082/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_1q7ml8m0/} \
    CONFIG.MEM_WIDTH {8} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {block} \
@@ -1342,7 +1342,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_7 { parentCell nameHier } {
   set StreamingFCLayer_Batch_7_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_7_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {65536} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_7_abts7hbd/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_7_9uriuj_q/} \
    CONFIG.MEM_WIDTH {8} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {block} \
@@ -1415,7 +1415,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_6 { parentCell nameHier } {
   set StreamingFCLayer_Batch_6_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_6_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {18432} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_6_jnwv2iom/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_6_ybhn0y4h/} \
    CONFIG.MEM_WIDTH {32} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {block} \
@@ -1488,10 +1488,10 @@ proc create_hier_cell_StreamingFCLayer_Batch_5 { parentCell nameHier } {
   set StreamingFCLayer_Batch_5_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_5_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {9216} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_5__3j7998n/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_5_1up71wmn/} \
    CONFIG.MEM_WIDTH {64} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {distributed} \
+   CONFIG.RAM_STYLE {block} \
    CONFIG.STRM0_DEPTH {9216} \
    CONFIG.STRM0_OFFSET {0} \
    CONFIG.STRM0_WIDTH {64} \
@@ -1561,10 +1561,10 @@ proc create_hier_cell_StreamingFCLayer_Batch_4 { parentCell nameHier } {
   set StreamingFCLayer_Batch_4_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_4_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {2304} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_4_1dot0gc5/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_4_hh27_ah5/} \
    CONFIG.MEM_WIDTH {128} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {distributed} \
+   CONFIG.RAM_STYLE {block} \
    CONFIG.STRM0_DEPTH {2304} \
    CONFIG.STRM0_OFFSET {0} \
    CONFIG.STRM0_WIDTH {128} \
@@ -1634,10 +1634,10 @@ proc create_hier_cell_StreamingFCLayer_Batch_3 { parentCell nameHier } {
   set StreamingFCLayer_Batch_3_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_3_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {576} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_3_ffmkj9yy/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_3_h7_9bcs3/} \
    CONFIG.MEM_WIDTH {256} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {distributed} \
+   CONFIG.RAM_STYLE {block} \
    CONFIG.STRM0_DEPTH {576} \
    CONFIG.STRM0_OFFSET {0} \
    CONFIG.STRM0_WIDTH {256} \
@@ -1707,7 +1707,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_2 { parentCell nameHier } {
   set StreamingFCLayer_Batch_2_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_2_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {144} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_2_3rnousoc/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_2_ow4ljsfb/} \
    CONFIG.MEM_WIDTH {512} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {distributed} \
@@ -1780,7 +1780,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_1 { parentCell nameHier } {
   set StreamingFCLayer_Batch_1_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_1_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {36} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_1_r0htqf01/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_1_6ej7r66t/} \
    CONFIG.MEM_WIDTH {1024} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {distributed} \
@@ -1853,7 +1853,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_0 { parentCell nameHier } {
   set StreamingFCLayer_Batch_0_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_0_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {9} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_0_hf84_wbu/} \
+   CONFIG.MEM_INIT {/home/nm/finn-example-ip/ip/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_0_9pwi1272/} \
    CONFIG.MEM_WIDTH {192} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {distributed} \
@@ -2300,12 +2300,12 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set m_axis_output [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis_output ]
+  set m_axis_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis_0 ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000.000000} \
-   ] $m_axis_output
+   ] $m_axis_0
 
-  set s_axis_input [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis_input ]
+  set s_axis_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis_0 ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000.000000} \
    CONFIG.HAS_TKEEP {0} \
@@ -2317,22 +2317,19 @@ proc create_root_design { parentCell } {
    CONFIG.TDEST_WIDTH {0} \
    CONFIG.TID_WIDTH {0} \
    CONFIG.TUSER_WIDTH {0} \
-   ] $s_axis_input
+   ] $s_axis_0
 
 
   # Create ports
   set ap_clk [ create_bd_port -dir I -type clk -freq_hz 100000000.000000 ap_clk ]
-  set_property -dict [ list \
-   CONFIG.ASSOCIATED_BUSIF {s_axis_input:m_axis_output} \
- ] $ap_clk
   set ap_rst_n [ create_bd_port -dir I -type rst ap_rst_n ]
 
   # Create instance: finn_ip
   create_hier_cell_finn_ip [current_bd_instance .] finn_ip
 
   # Create interface connections
-  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_9_out_V [get_bd_intf_ports m_axis_output] [get_bd_intf_pins finn_ip/m_axis_0]
-  connect_bd_intf_net -intf_net in0_V_0_1 [get_bd_intf_ports s_axis_input] [get_bd_intf_pins finn_ip/s_axis_0]
+  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_9_out_V [get_bd_intf_ports m_axis_0] [get_bd_intf_pins finn_ip/m_axis_0]
+  connect_bd_intf_net -intf_net in0_V_0_1 [get_bd_intf_ports s_axis_0] [get_bd_intf_pins finn_ip/s_axis_0]
 
   # Create port connections
   connect_bd_net -net ap_clk_0_1 [get_bd_ports ap_clk] [get_bd_pins finn_ip/ap_clk]

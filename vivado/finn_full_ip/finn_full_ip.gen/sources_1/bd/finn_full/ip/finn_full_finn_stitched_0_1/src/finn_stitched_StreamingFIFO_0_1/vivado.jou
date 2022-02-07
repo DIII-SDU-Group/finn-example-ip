@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Feb  7 18:23:14 2022
+# Process ID: 11903
+# Current directory: /tmp/finn_dev_nm/code_gen_ipgen_StreamingFIFO_0_tii52s9a/project_StreamingFIFO_0/sol1/impl/verilog
+# Command line: vivado -mode batch -source package_ip.tcl
+# Log file: /tmp/finn_dev_nm/code_gen_ipgen_StreamingFIFO_0_tii52s9a/project_StreamingFIFO_0/sol1/impl/verilog/vivado.log
+# Journal file: /tmp/finn_dev_nm/code_gen_ipgen_StreamingFIFO_0_tii52s9a/project_StreamingFIFO_0/sol1/impl/verilog/vivado.jou
+#-----------------------------------------------------------
+source package_ip.tcl

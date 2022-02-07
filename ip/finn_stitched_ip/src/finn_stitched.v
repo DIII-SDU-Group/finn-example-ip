@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Mon Feb  7 16:53:26 2022
+//Date        : Mon Feb  7 21:36:33 2022
 //Host        : nm running 64-bit Ubuntu 20.04.3 LTS
 //Command     : generate_target finn_stitched.bd
 //Design      : finn_stitched
@@ -47,7 +47,7 @@ module StreamingFCLayer_Batch_0_imp_MCWOMF
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[63:0] = StreamingFCLayer_Batch_0_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_0_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_0_0 StreamingFCLayer_Batch_0
+  finn_stitched_StreamingFCLayer_Batch_0_1 StreamingFCLayer_Batch_0
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -116,7 +116,7 @@ module StreamingFCLayer_Batch_1_imp_1L1QJF5
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[31:0] = StreamingFCLayer_Batch_1_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_1_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_1_0 StreamingFCLayer_Batch_1
+  finn_stitched_StreamingFCLayer_Batch_1_1 StreamingFCLayer_Batch_1
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -128,7 +128,7 @@ module StreamingFCLayer_Batch_1_imp_1L1QJF5
         .weights_V_TDATA(StreamingFCLayer_Batch_1_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_1_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_1_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_1_wstrm_0 StreamingFCLayer_Batch_1_wstrm
+  finn_stitched_StreamingFCLayer_Batch_1_wstrm_1 StreamingFCLayer_Batch_1_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -185,7 +185,7 @@ module StreamingFCLayer_Batch_2_imp_1DDRJEY
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[15:0] = StreamingFCLayer_Batch_2_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_2_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_2_0 StreamingFCLayer_Batch_2
+  finn_stitched_StreamingFCLayer_Batch_2_1 StreamingFCLayer_Batch_2
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -197,7 +197,7 @@ module StreamingFCLayer_Batch_2_imp_1DDRJEY
         .weights_V_TDATA(StreamingFCLayer_Batch_2_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_2_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_2_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_2_wstrm_0 StreamingFCLayer_Batch_2_wstrm
+  finn_stitched_StreamingFCLayer_Batch_2_wstrm_1 StreamingFCLayer_Batch_2_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -254,7 +254,7 @@ module StreamingFCLayer_Batch_3_imp_CH3EKC
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = StreamingFCLayer_Batch_3_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_3_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_3_0 StreamingFCLayer_Batch_3
+  finn_stitched_StreamingFCLayer_Batch_3_1 StreamingFCLayer_Batch_3
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -266,7 +266,7 @@ module StreamingFCLayer_Batch_3_imp_CH3EKC
         .weights_V_TDATA(StreamingFCLayer_Batch_3_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_3_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_3_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_3_wstrm_0 StreamingFCLayer_Batch_3_wstrm
+  finn_stitched_StreamingFCLayer_Batch_3_wstrm_1 StreamingFCLayer_Batch_3_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -335,7 +335,7 @@ module StreamingFCLayer_Batch_4_imp_KBDL8C
         .weights_V_TDATA(StreamingFCLayer_Batch_4_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_4_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_4_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_4_wstrm_0 StreamingFCLayer_Batch_4_wstrm
+  finn_stitched_StreamingFCLayer_Batch_4_wstrm_1 StreamingFCLayer_Batch_4_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -392,7 +392,7 @@ module StreamingFCLayer_Batch_5_imp_1MVRWZU
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = StreamingFCLayer_Batch_5_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_5_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_5_0 StreamingFCLayer_Batch_5
+  finn_stitched_StreamingFCLayer_Batch_5_1 StreamingFCLayer_Batch_5
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -404,7 +404,7 @@ module StreamingFCLayer_Batch_5_imp_1MVRWZU
         .weights_V_TDATA(StreamingFCLayer_Batch_5_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_5_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_5_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_5_wstrm_0 StreamingFCLayer_Batch_5_wstrm
+  finn_stitched_StreamingFCLayer_Batch_5_wstrm_1 StreamingFCLayer_Batch_5_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -461,7 +461,7 @@ module StreamingFCLayer_Batch_6_imp_1APHHCH
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = StreamingFCLayer_Batch_6_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_6_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_6_0 StreamingFCLayer_Batch_6
+  finn_stitched_StreamingFCLayer_Batch_6_1 StreamingFCLayer_Batch_6
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -473,7 +473,7 @@ module StreamingFCLayer_Batch_6_imp_1APHHCH
         .weights_V_TDATA(StreamingFCLayer_Batch_6_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_6_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_6_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_6_wstrm_0 StreamingFCLayer_Batch_6_wstrm
+  finn_stitched_StreamingFCLayer_Batch_6_wstrm_1 StreamingFCLayer_Batch_6_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -530,7 +530,7 @@ module StreamingFCLayer_Batch_7_imp_ESVUXZ
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = StreamingFCLayer_Batch_7_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_7_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_7_0 StreamingFCLayer_Batch_7
+  finn_stitched_StreamingFCLayer_Batch_7_1 StreamingFCLayer_Batch_7
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -542,7 +542,7 @@ module StreamingFCLayer_Batch_7_imp_ESVUXZ
         .weights_V_TDATA(StreamingFCLayer_Batch_7_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_7_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_7_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_7_wstrm_0 StreamingFCLayer_Batch_7_wstrm
+  finn_stitched_StreamingFCLayer_Batch_7_wstrm_1 StreamingFCLayer_Batch_7_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -599,7 +599,7 @@ module StreamingFCLayer_Batch_8_imp_ROX40H
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = StreamingFCLayer_Batch_8_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_8_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_8_0 StreamingFCLayer_Batch_8
+  finn_stitched_StreamingFCLayer_Batch_8_1 StreamingFCLayer_Batch_8
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -668,7 +668,7 @@ module StreamingFCLayer_Batch_9_imp_1YOPI3R
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[31:0] = StreamingFCLayer_Batch_9_out_V_TDATA;
   assign out_V_tvalid = StreamingFCLayer_Batch_9_out_V_TVALID;
-  finn_stitched_StreamingFCLayer_Batch_9_0 StreamingFCLayer_Batch_9
+  finn_stitched_StreamingFCLayer_Batch_9_1 StreamingFCLayer_Batch_9
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
         .in0_V_TDATA(in0_V_1_TDATA),
@@ -680,7 +680,7 @@ module StreamingFCLayer_Batch_9_imp_1YOPI3R
         .weights_V_TDATA(StreamingFCLayer_Batch_9_wstrm_m_axis_0_TDATA),
         .weights_V_TREADY(StreamingFCLayer_Batch_9_wstrm_m_axis_0_TREADY),
         .weights_V_TVALID(StreamingFCLayer_Batch_9_wstrm_m_axis_0_TVALID));
-  finn_stitched_StreamingFCLayer_Batch_9_wstrm_0 StreamingFCLayer_Batch_9_wstrm
+  finn_stitched_StreamingFCLayer_Batch_9_wstrm_1 StreamingFCLayer_Batch_9_wstrm
        (.aclk(ap_clk_1),
         .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .aresetn(ap_rst_n_1),
@@ -734,7 +734,7 @@ module StreamingFIFO_17_imp_AQT0OK
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_4 fifo
+  finn_stitched_fifo_20 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -780,7 +780,7 @@ module StreamingFIFO_1_imp_15TOQHK
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_0 fifo
+  finn_stitched_fifo_16 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -826,7 +826,7 @@ module StreamingFIFO_23_imp_CVK72U
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_5 fifo
+  finn_stitched_fifo_21 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -872,7 +872,7 @@ module StreamingFIFO_25_imp_1NK8Z8G
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_6 fifo
+  finn_stitched_fifo_22 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -918,7 +918,7 @@ module StreamingFIFO_31_imp_X0K9EB
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_7 fifo
+  finn_stitched_fifo_23 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -964,7 +964,7 @@ module StreamingFIFO_32_imp_2Y0288
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_8 fifo
+  finn_stitched_fifo_24 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1010,7 +1010,7 @@ module StreamingFIFO_34_imp_1V8Z6DA
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[31:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_9 fifo
+  finn_stitched_fifo_25 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1056,7 +1056,7 @@ module StreamingFIFO_38_imp_1O493V7
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_10 fifo
+  finn_stitched_fifo_26 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1102,7 +1102,7 @@ module StreamingFIFO_39_imp_JBN4PX
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_11 fifo
+  finn_stitched_fifo_27 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1148,7 +1148,7 @@ module StreamingFIFO_3_imp_X8X9DH
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[23:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_1 fifo
+  finn_stitched_fifo_17 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1194,7 +1194,7 @@ module StreamingFIFO_41_imp_1U16MBT
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[31:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_12 fifo
+  finn_stitched_fifo_28 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1240,7 +1240,7 @@ module StreamingFIFO_45_imp_1VSDE36
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_13 fifo
+  finn_stitched_fifo_29 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1286,7 +1286,7 @@ module StreamingFIFO_46_imp_11SDWEH
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_14 fifo
+  finn_stitched_fifo_30 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1332,7 +1332,7 @@ module StreamingFIFO_48_imp_IRW4AX
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[31:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_15 fifo
+  finn_stitched_fifo_31 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1378,7 +1378,7 @@ module StreamingFIFO_7_imp_UNQ7CE
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_2 fifo
+  finn_stitched_fifo_18 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1424,7 +1424,7 @@ module StreamingFIFO_9_imp_1A11A9A
   assign in0_V_tready = in0_V_1_TREADY;
   assign out_V_tdata[15:0] = fifo_M_AXIS_TDATA;
   assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_stitched_fifo_3 fifo
+  finn_stitched_fifo_19 fifo
        (.m_axis_tdata(fifo_M_AXIS_TDATA),
         .m_axis_tready(fifo_M_AXIS_TREADY),
         .m_axis_tvalid(fifo_M_AXIS_TVALID),
@@ -1728,7 +1728,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(ConvolutionInputGenerator_0_out_V_TDATA),
         .out_V_TREADY(ConvolutionInputGenerator_0_out_V_TREADY),
         .out_V_TVALID(ConvolutionInputGenerator_0_out_V_TVALID));
-  finn_stitched_ConvolutionInputGenerator_1_0 ConvolutionInputGenerator_1
+  finn_stitched_ConvolutionInputGenerator_1_1 ConvolutionInputGenerator_1
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_9_out_V_TDATA),
@@ -1737,7 +1737,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(ConvolutionInputGenerator_1_out_V_TDATA),
         .out_V_TREADY(ConvolutionInputGenerator_1_out_V_TREADY),
         .out_V_TVALID(ConvolutionInputGenerator_1_out_V_TVALID));
-  finn_stitched_ConvolutionInputGenerator_2_0 ConvolutionInputGenerator_2
+  finn_stitched_ConvolutionInputGenerator_2_1 ConvolutionInputGenerator_2
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_17_out_V_TDATA),
@@ -1764,7 +1764,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(ConvolutionInputGenerator_4_out_V_TDATA),
         .out_V_TREADY(ConvolutionInputGenerator_4_out_V_TREADY),
         .out_V_TVALID(ConvolutionInputGenerator_4_out_V_TVALID));
-  finn_stitched_ConvolutionInputGenerator_5_0 ConvolutionInputGenerator_5
+  finn_stitched_ConvolutionInputGenerator_5_1 ConvolutionInputGenerator_5
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_39_out_V_TDATA),
@@ -1773,7 +1773,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(ConvolutionInputGenerator_5_out_V_TDATA),
         .out_V_TREADY(ConvolutionInputGenerator_5_out_V_TREADY),
         .out_V_TVALID(ConvolutionInputGenerator_5_out_V_TVALID));
-  finn_stitched_ConvolutionInputGenerator_6_0 ConvolutionInputGenerator_6
+  finn_stitched_ConvolutionInputGenerator_6_1 ConvolutionInputGenerator_6
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_46_out_V_TDATA),
@@ -1800,7 +1800,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(FMPadding_Batch_1_out_V_TDATA),
         .out_V_TREADY(FMPadding_Batch_1_out_V_TREADY),
         .out_V_TVALID(FMPadding_Batch_1_out_V_TVALID));
-  finn_stitched_FMPadding_Batch_2_0 FMPadding_Batch_2
+  finn_stitched_FMPadding_Batch_2_1 FMPadding_Batch_2
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_15_out_V_TDATA),
@@ -1809,7 +1809,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(FMPadding_Batch_2_out_V_TDATA),
         .out_V_TREADY(FMPadding_Batch_2_out_V_TREADY),
         .out_V_TVALID(FMPadding_Batch_2_out_V_TVALID));
-  finn_stitched_FMPadding_Batch_3_0 FMPadding_Batch_3
+  finn_stitched_FMPadding_Batch_3_1 FMPadding_Batch_3
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_23_out_V_TDATA),
@@ -1827,7 +1827,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(FMPadding_Batch_4_out_V_TDATA),
         .out_V_TREADY(FMPadding_Batch_4_out_V_TREADY),
         .out_V_TVALID(FMPadding_Batch_4_out_V_TVALID));
-  finn_stitched_FMPadding_Batch_5_0 FMPadding_Batch_5
+  finn_stitched_FMPadding_Batch_5_1 FMPadding_Batch_5
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_38_out_V_TDATA),
@@ -1836,7 +1836,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(FMPadding_Batch_5_out_V_TDATA),
         .out_V_TREADY(FMPadding_Batch_5_out_V_TREADY),
         .out_V_TVALID(FMPadding_Batch_5_out_V_TVALID));
-  finn_stitched_FMPadding_Batch_6_0 FMPadding_Batch_6
+  finn_stitched_FMPadding_Batch_6_1 FMPadding_Batch_6
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_45_out_V_TDATA),
@@ -1845,7 +1845,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(FMPadding_Batch_6_out_V_TDATA),
         .out_V_TREADY(FMPadding_Batch_6_out_V_TREADY),
         .out_V_TVALID(FMPadding_Batch_6_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_0_0 StreamingDataWidthConverter_Batch_0
+  finn_stitched_StreamingDataWidthConverter_Batch_0_1 StreamingDataWidthConverter_Batch_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(FMPadding_Batch_0_out_V_TDATA),
@@ -1854,7 +1854,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_0_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_0_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_0_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_1_0 StreamingDataWidthConverter_Batch_1
+  finn_stitched_StreamingDataWidthConverter_Batch_1_1 StreamingDataWidthConverter_Batch_1
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_6_out_V_TDATA),
@@ -1872,7 +1872,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_10_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_10_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_10_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_11_0 StreamingDataWidthConverter_Batch_11
+  finn_stitched_StreamingDataWidthConverter_Batch_11_1 StreamingDataWidthConverter_Batch_11
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(ConvolutionInputGenerator_3_out_V_TDATA),
@@ -1881,7 +1881,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_11_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_11_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_11_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_12_0 StreamingDataWidthConverter_Batch_12
+  finn_stitched_StreamingDataWidthConverter_Batch_12_1 StreamingDataWidthConverter_Batch_12
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_3_out_V_TDATA),
@@ -1890,7 +1890,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_12_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_12_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_12_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_13_0 StreamingDataWidthConverter_Batch_13
+  finn_stitched_StreamingDataWidthConverter_Batch_13_1 StreamingDataWidthConverter_Batch_13
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_30_out_V_TDATA),
@@ -1908,7 +1908,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_14_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_14_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_14_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_15_0 StreamingDataWidthConverter_Batch_15
+  finn_stitched_StreamingDataWidthConverter_Batch_15_1 StreamingDataWidthConverter_Batch_15
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_4_out_V_TDATA),
@@ -1917,7 +1917,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_15_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_15_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_15_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_16_0 StreamingDataWidthConverter_Batch_16
+  finn_stitched_StreamingDataWidthConverter_Batch_16_1 StreamingDataWidthConverter_Batch_16
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_37_out_V_TDATA),
@@ -1926,7 +1926,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_16_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_16_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_16_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_17_0 StreamingDataWidthConverter_Batch_17
+  finn_stitched_StreamingDataWidthConverter_Batch_17_1 StreamingDataWidthConverter_Batch_17
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(ConvolutionInputGenerator_5_out_V_TDATA),
@@ -1935,7 +1935,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_17_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_17_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_17_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_18_0 StreamingDataWidthConverter_Batch_18
+  finn_stitched_StreamingDataWidthConverter_Batch_18_1 StreamingDataWidthConverter_Batch_18
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_5_out_V_TDATA),
@@ -1944,7 +1944,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_18_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_18_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_18_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_19_0 StreamingDataWidthConverter_Batch_19
+  finn_stitched_StreamingDataWidthConverter_Batch_19_1 StreamingDataWidthConverter_Batch_19
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingMaxPool_Batch_5_out_V_TDATA),
@@ -1953,7 +1953,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_19_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_19_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_19_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_2_0 StreamingDataWidthConverter_Batch_2
+  finn_stitched_StreamingDataWidthConverter_Batch_2_1 StreamingDataWidthConverter_Batch_2
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(FMPadding_Batch_1_out_V_TDATA),
@@ -1962,7 +1962,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_2_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_2_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_2_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_20_0 StreamingDataWidthConverter_Batch_20
+  finn_stitched_StreamingDataWidthConverter_Batch_20_1 StreamingDataWidthConverter_Batch_20
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(ConvolutionInputGenerator_6_out_V_TDATA),
@@ -1971,7 +1971,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_20_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_20_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_20_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_21_0 StreamingDataWidthConverter_Batch_21
+  finn_stitched_StreamingDataWidthConverter_Batch_21_1 StreamingDataWidthConverter_Batch_21
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_6_out_V_TDATA),
@@ -1980,7 +1980,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_21_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_21_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_21_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_22_0 StreamingDataWidthConverter_Batch_22
+  finn_stitched_StreamingDataWidthConverter_Batch_22_1 StreamingDataWidthConverter_Batch_22
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingMaxPool_Batch_6_out_V_TDATA),
@@ -1989,7 +1989,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_22_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_22_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_22_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_23_0 StreamingDataWidthConverter_Batch_23
+  finn_stitched_StreamingDataWidthConverter_Batch_23_1 StreamingDataWidthConverter_Batch_23
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_7_out_V_TDATA),
@@ -1998,7 +1998,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_23_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_23_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_23_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_24_0 StreamingDataWidthConverter_Batch_24
+  finn_stitched_StreamingDataWidthConverter_Batch_24_1 StreamingDataWidthConverter_Batch_24
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_8_out_V_TDATA),
@@ -2007,7 +2007,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_24_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_24_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_24_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_3_0 StreamingDataWidthConverter_Batch_3
+  finn_stitched_StreamingDataWidthConverter_Batch_3_1 StreamingDataWidthConverter_Batch_3
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(ConvolutionInputGenerator_1_out_V_TDATA),
@@ -2016,7 +2016,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_3_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_3_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_3_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_4_0 StreamingDataWidthConverter_Batch_4
+  finn_stitched_StreamingDataWidthConverter_Batch_4_1 StreamingDataWidthConverter_Batch_4
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_1_out_V_TDATA),
@@ -2025,7 +2025,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_4_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_4_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_4_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_5_0 StreamingDataWidthConverter_Batch_5
+  finn_stitched_StreamingDataWidthConverter_Batch_5_1 StreamingDataWidthConverter_Batch_5
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_14_out_V_TDATA),
@@ -2034,7 +2034,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_5_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_5_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_5_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_6_0 StreamingDataWidthConverter_Batch_6
+  finn_stitched_StreamingDataWidthConverter_Batch_6_1 StreamingDataWidthConverter_Batch_6
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(FMPadding_Batch_2_out_V_TDATA),
@@ -2043,7 +2043,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_6_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_6_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_6_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_7_0 StreamingDataWidthConverter_Batch_7
+  finn_stitched_StreamingDataWidthConverter_Batch_7_1 StreamingDataWidthConverter_Batch_7
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(ConvolutionInputGenerator_2_out_V_TDATA),
@@ -2052,7 +2052,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_7_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_7_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_7_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_8_0 StreamingDataWidthConverter_Batch_8
+  finn_stitched_StreamingDataWidthConverter_Batch_8_1 StreamingDataWidthConverter_Batch_8
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_2_out_V_TDATA),
@@ -2061,7 +2061,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingDataWidthConverter_Batch_8_out_V_TDATA),
         .out_V_TREADY(StreamingDataWidthConverter_Batch_8_out_V_TREADY),
         .out_V_TVALID(StreamingDataWidthConverter_Batch_8_out_V_TVALID));
-  finn_stitched_StreamingDataWidthConverter_Batch_9_0 StreamingDataWidthConverter_Batch_9
+  finn_stitched_StreamingDataWidthConverter_Batch_9_1 StreamingDataWidthConverter_Batch_9
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_22_out_V_TDATA),
@@ -2160,7 +2160,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFCLayer_Batch_9_out_V_TDATA),
         .out_V_tready(StreamingFCLayer_Batch_9_out_V_TREADY),
         .out_V_tvalid(StreamingFCLayer_Batch_9_out_V_TVALID));
-  finn_stitched_StreamingFIFO_0_0 StreamingFIFO_0
+  finn_stitched_StreamingFIFO_0_1 StreamingFIFO_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(in0_V_0_1_TDATA),
@@ -2178,7 +2178,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFIFO_1_out_V_TDATA),
         .out_V_tready(StreamingFIFO_1_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_1_out_V_TVALID));
-  finn_stitched_StreamingFIFO_11_0 StreamingFIFO_11
+  finn_stitched_StreamingFIFO_11_1 StreamingFIFO_11
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_3_out_V_TDATA),
@@ -2187,7 +2187,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingFIFO_11_out_V_TDATA),
         .out_V_TREADY(StreamingFIFO_11_out_V_TREADY),
         .out_V_TVALID(StreamingFIFO_11_out_V_TVALID));
-  finn_stitched_StreamingFIFO_14_0 StreamingFIFO_14
+  finn_stitched_StreamingFIFO_14_1 StreamingFIFO_14
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingMaxPool_Batch_1_out_V_TDATA),
@@ -2196,7 +2196,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingFIFO_14_out_V_TDATA),
         .out_V_TREADY(StreamingFIFO_14_out_V_TREADY),
         .out_V_TVALID(StreamingFIFO_14_out_V_TVALID));
-  finn_stitched_StreamingFIFO_15_0 StreamingFIFO_15
+  finn_stitched_StreamingFIFO_15_1 StreamingFIFO_15
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_5_out_V_TDATA),
@@ -2214,7 +2214,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFIFO_17_out_V_TDATA),
         .out_V_tready(StreamingFIFO_17_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_17_out_V_TVALID));
-  finn_stitched_StreamingFIFO_19_0 StreamingFIFO_19
+  finn_stitched_StreamingFIFO_19_1 StreamingFIFO_19
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_7_out_V_TDATA),
@@ -2223,7 +2223,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingFIFO_19_out_V_TDATA),
         .out_V_TREADY(StreamingFIFO_19_out_V_TREADY),
         .out_V_TVALID(StreamingFIFO_19_out_V_TVALID));
-  finn_stitched_StreamingFIFO_22_0 StreamingFIFO_22
+  finn_stitched_StreamingFIFO_22_1 StreamingFIFO_22
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingMaxPool_Batch_2_out_V_TDATA),
@@ -2250,7 +2250,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFIFO_25_out_V_TDATA),
         .out_V_tready(StreamingFIFO_25_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_25_out_V_TVALID));
-  finn_stitched_StreamingFIFO_27_0 StreamingFIFO_27
+  finn_stitched_StreamingFIFO_27_1 StreamingFIFO_27
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_11_out_V_TDATA),
@@ -2268,7 +2268,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFIFO_3_out_V_TDATA),
         .out_V_tready(StreamingFIFO_3_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_3_out_V_TVALID));
-  finn_stitched_StreamingFIFO_30_0 StreamingFIFO_30
+  finn_stitched_StreamingFIFO_30_1 StreamingFIFO_30
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingMaxPool_Batch_3_out_V_TDATA),
@@ -2304,7 +2304,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFIFO_34_out_V_TDATA),
         .out_V_tready(StreamingFIFO_34_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_34_out_V_TVALID));
-  finn_stitched_StreamingFIFO_37_0 StreamingFIFO_37
+  finn_stitched_StreamingFIFO_37_1 StreamingFIFO_37
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingMaxPool_Batch_4_out_V_TDATA),
@@ -2367,7 +2367,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFIFO_48_out_V_TDATA),
         .out_V_tready(StreamingFIFO_48_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_48_out_V_TVALID));
-  finn_stitched_StreamingFIFO_5_0 StreamingFIFO_5
+  finn_stitched_StreamingFIFO_5_1 StreamingFIFO_5
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFCLayer_Batch_0_out_V_TDATA),
@@ -2376,7 +2376,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingFIFO_5_out_V_TDATA),
         .out_V_TREADY(StreamingFIFO_5_out_V_TREADY),
         .out_V_TVALID(StreamingFIFO_5_out_V_TVALID));
-  finn_stitched_StreamingFIFO_6_0 StreamingFIFO_6
+  finn_stitched_StreamingFIFO_6_1 StreamingFIFO_6
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingMaxPool_Batch_0_out_V_TDATA),
@@ -2403,7 +2403,7 @@ module finn_ip_imp_13S4NNM
         .out_V_tdata(StreamingFIFO_9_out_V_TDATA),
         .out_V_tready(StreamingFIFO_9_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_9_out_V_TVALID));
-  finn_stitched_StreamingMaxPool_Batch_0_0 StreamingMaxPool_Batch_0
+  finn_stitched_StreamingMaxPool_Batch_0_1 StreamingMaxPool_Batch_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_5_out_V_TDATA),
@@ -2412,7 +2412,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingMaxPool_Batch_0_out_V_TDATA),
         .out_V_TREADY(StreamingMaxPool_Batch_0_out_V_TREADY),
         .out_V_TVALID(StreamingMaxPool_Batch_0_out_V_TVALID));
-  finn_stitched_StreamingMaxPool_Batch_1_0 StreamingMaxPool_Batch_1
+  finn_stitched_StreamingMaxPool_Batch_1_1 StreamingMaxPool_Batch_1
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_4_out_V_TDATA),
@@ -2421,7 +2421,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingMaxPool_Batch_1_out_V_TDATA),
         .out_V_TREADY(StreamingMaxPool_Batch_1_out_V_TREADY),
         .out_V_TVALID(StreamingMaxPool_Batch_1_out_V_TVALID));
-  finn_stitched_StreamingMaxPool_Batch_2_0 StreamingMaxPool_Batch_2
+  finn_stitched_StreamingMaxPool_Batch_2_1 StreamingMaxPool_Batch_2
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_8_out_V_TDATA),
@@ -2439,7 +2439,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingMaxPool_Batch_3_out_V_TDATA),
         .out_V_TREADY(StreamingMaxPool_Batch_3_out_V_TREADY),
         .out_V_TVALID(StreamingMaxPool_Batch_3_out_V_TVALID));
-  finn_stitched_StreamingMaxPool_Batch_4_0 StreamingMaxPool_Batch_4
+  finn_stitched_StreamingMaxPool_Batch_4_1 StreamingMaxPool_Batch_4
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_15_out_V_TDATA),
@@ -2448,7 +2448,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingMaxPool_Batch_4_out_V_TDATA),
         .out_V_TREADY(StreamingMaxPool_Batch_4_out_V_TREADY),
         .out_V_TVALID(StreamingMaxPool_Batch_4_out_V_TVALID));
-  finn_stitched_StreamingMaxPool_Batch_5_0 StreamingMaxPool_Batch_5
+  finn_stitched_StreamingMaxPool_Batch_5_1 StreamingMaxPool_Batch_5
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_18_out_V_TDATA),
@@ -2457,7 +2457,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingMaxPool_Batch_5_out_V_TDATA),
         .out_V_TREADY(StreamingMaxPool_Batch_5_out_V_TREADY),
         .out_V_TVALID(StreamingMaxPool_Batch_5_out_V_TVALID));
-  finn_stitched_StreamingMaxPool_Batch_6_0 StreamingMaxPool_Batch_6
+  finn_stitched_StreamingMaxPool_Batch_6_1 StreamingMaxPool_Batch_6
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingDataWidthConverter_Batch_21_out_V_TDATA),
@@ -2466,7 +2466,7 @@ module finn_ip_imp_13S4NNM
         .out_V_TDATA(StreamingMaxPool_Batch_6_out_V_TDATA),
         .out_V_TREADY(StreamingMaxPool_Batch_6_out_V_TREADY),
         .out_V_TVALID(StreamingMaxPool_Batch_6_out_V_TVALID));
-  finn_stitched_Thresholding_Batch_0_0 Thresholding_Batch_0
+  finn_stitched_Thresholding_Batch_0_1 Thresholding_Batch_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(StreamingFIFO_0_out_V_TDATA),
@@ -2481,20 +2481,20 @@ endmodule
 module finn_stitched
    (ap_clk,
     ap_rst_n,
-    m_axis_output_tdata,
-    m_axis_output_tready,
-    m_axis_output_tvalid,
-    s_axis_input_tdata,
-    s_axis_input_tready,
-    s_axis_input_tvalid);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AP_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AP_CLK, ASSOCIATED_BUSIF s_axis_input:m_axis_output, ASSOCIATED_RESET ap_rst_n, CLK_DOMAIN finn_stitched_ap_clk_0, FREQ_HZ 100000000.000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input ap_clk;
+    m_axis_0_tdata,
+    m_axis_0_tready,
+    m_axis_0_tvalid,
+    s_axis_0_tdata,
+    s_axis_0_tready,
+    s_axis_0_tvalid);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AP_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AP_CLK, ASSOCIATED_BUSIF s_axis_0:m_axis_0, ASSOCIATED_RESET ap_rst_n, CLK_DOMAIN finn_stitched_ap_clk_0, FREQ_HZ 100000000.000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input ap_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.AP_RST_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.AP_RST_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input ap_rst_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_output " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_output, CLK_DOMAIN finn_stitched_ap_clk_0, FREQ_HZ 100000000.000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [31:0]m_axis_output_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_output " *) input m_axis_output_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_output " *) output m_axis_output_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_input " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_input, CLK_DOMAIN finn_stitched_ap_clk_0, FREQ_HZ 100000000.000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [7:0]s_axis_input_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_input " *) output s_axis_input_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_input " *) input s_axis_input_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, CLK_DOMAIN finn_stitched_ap_clk_0, FREQ_HZ 100000000.000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [31:0]m_axis_0_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 " *) input m_axis_0_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 " *) output m_axis_0_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_0, CLK_DOMAIN finn_stitched_ap_clk_0, FREQ_HZ 100000000.000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [7:0]s_axis_0_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_0 " *) output s_axis_0_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_0 " *) input s_axis_0_tvalid;
 
   wire [31:0]StreamingFCLayer_Batch_9_out_V_TDATA;
   wire StreamingFCLayer_Batch_9_out_V_TREADY;
@@ -2505,14 +2505,14 @@ module finn_stitched
   wire in0_V_0_1_TREADY;
   wire in0_V_0_1_TVALID;
 
-  assign StreamingFCLayer_Batch_9_out_V_TREADY = m_axis_output_tready;
+  assign StreamingFCLayer_Batch_9_out_V_TREADY = m_axis_0_tready;
   assign ap_clk_0_1 = ap_clk;
   assign ap_rst_n_0_1 = ap_rst_n;
-  assign in0_V_0_1_TDATA = s_axis_input_tdata[7:0];
-  assign in0_V_0_1_TVALID = s_axis_input_tvalid;
-  assign m_axis_output_tdata[31:0] = StreamingFCLayer_Batch_9_out_V_TDATA;
-  assign m_axis_output_tvalid = StreamingFCLayer_Batch_9_out_V_TVALID;
-  assign s_axis_input_tready = in0_V_0_1_TREADY;
+  assign in0_V_0_1_TDATA = s_axis_0_tdata[7:0];
+  assign in0_V_0_1_TVALID = s_axis_0_tvalid;
+  assign m_axis_0_tdata[31:0] = StreamingFCLayer_Batch_9_out_V_TDATA;
+  assign m_axis_0_tvalid = StreamingFCLayer_Batch_9_out_V_TVALID;
+  assign s_axis_0_tready = in0_V_0_1_TREADY;
   finn_ip_imp_13S4NNM finn_ip
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
