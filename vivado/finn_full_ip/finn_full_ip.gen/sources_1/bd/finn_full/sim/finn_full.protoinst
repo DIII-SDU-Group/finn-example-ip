@@ -1,0 +1,97 @@
+{
+	"version": "1.0",
+	"modules": {
+		"finn_full": {
+			"proto_instances": {
+				"/fetch_finn_0/finn_stream_V": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "finn_stream_V_TDATA"},
+						"TREADY": { "actual": "finn_stream_V_TREADY"},
+						"TVALID": { "actual": "finn_stream_V_TVALID"}
+					}
+				},
+				"/fetch_finn_0/s_axi_AXI_CPU": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARADDR": { "actual": "s_axi_AXI_CPU_ARADDR"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"ARREADY": { "actual": "s_axi_AXI_CPU_ARREADY"},
+						"ARVALID": { "actual": "s_axi_AXI_CPU_ARVALID"},
+						"AWADDR": { "actual": "s_axi_AXI_CPU_AWADDR"},
+						"AWREADY": { "actual": "s_axi_AXI_CPU_AWREADY"},
+						"AWVALID": { "actual": "s_axi_AXI_CPU_AWVALID"},
+						"BREADY": { "actual": "s_axi_AXI_CPU_BREADY"},
+						"BRESP": { "actual": "s_axi_AXI_CPU_BRESP"},
+						"BVALID": { "actual": "s_axi_AXI_CPU_BVALID"},
+						"RDATA": { "actual": "s_axi_AXI_CPU_RDATA"},
+						"RREADY": { "actual": "s_axi_AXI_CPU_RREADY"},
+						"RRESP": { "actual": "s_axi_AXI_CPU_RRESP"},
+						"RVALID": { "actual": "s_axi_AXI_CPU_RVALID"},
+						"WDATA": { "actual": "s_axi_AXI_CPU_WDATA"},
+						"WREADY": { "actual": "s_axi_AXI_CPU_WREADY"},
+						"WSTRB": { "actual": "s_axi_AXI_CPU_WSTRB"},
+						"WVALID": { "actual": "s_axi_AXI_CPU_WVALID"}
+					}
+				},
+				"/finn_stitched_0/m_axis_output": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "m_axis_output_tdata[31:0]"},
+						"TREADY": { "actual": "m_axis_output_tready"},
+						"TVALID": { "actual": "m_axis_output_tvalid"}
+					}
+				},
+				"/finn_stitched_0/s_axis_input": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "s_axis_input_tdata[7:0]"},
+						"TREADY": { "actual": "s_axis_input_tready"},
+						"TVALID": { "actual": "s_axis_input_tvalid"}
+					}
+				},
+				"/streamToFinn_0/s_axi_AXI_CPU": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARADDR": { "actual": "s_axi_AXI_CPU_ARADDR"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"ARREADY": { "actual": "s_axi_AXI_CPU_ARREADY"},
+						"ARVALID": { "actual": "s_axi_AXI_CPU_ARVALID"},
+						"AWADDR": { "actual": "s_axi_AXI_CPU_AWADDR"},
+						"AWREADY": { "actual": "s_axi_AXI_CPU_AWREADY"},
+						"AWVALID": { "actual": "s_axi_AXI_CPU_AWVALID"},
+						"BREADY": { "actual": "s_axi_AXI_CPU_BREADY"},
+						"BRESP": { "actual": "s_axi_AXI_CPU_BRESP"},
+						"BVALID": { "actual": "s_axi_AXI_CPU_BVALID"},
+						"RDATA": { "actual": "s_axi_AXI_CPU_RDATA"},
+						"RREADY": { "actual": "s_axi_AXI_CPU_RREADY"},
+						"RRESP": { "actual": "s_axi_AXI_CPU_RRESP"},
+						"RVALID": { "actual": "s_axi_AXI_CPU_RVALID"},
+						"WDATA": { "actual": "s_axi_AXI_CPU_WDATA"},
+						"WREADY": { "actual": "s_axi_AXI_CPU_WREADY"},
+						"WSTRB": { "actual": "s_axi_AXI_CPU_WSTRB"},
+						"WVALID": { "actual": "s_axi_AXI_CPU_WVALID"}
+					}
+				},
+				"/streamToFinn_0/stream_finn_V": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "stream_finn_V_TDATA"},
+						"TREADY": { "actual": "stream_finn_V_TREADY"},
+						"TVALID": { "actual": "stream_finn_V_TVALID"}
+					}
+				}
+			}
+		}
+	}
+}
