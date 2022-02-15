@@ -3273,8 +3273,8 @@
       <xilinx:displayName>finn_stitched_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:vendorDisplayName>DIII</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-02-15T20:39:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-02-15T20:47:17Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@13a82b6e_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@72cbce00_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
@@ -3290,6 +3290,11 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4c1f733_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@301089b0_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@24569aea_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a88d527_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a84dff0_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51e9378b_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fbe2f06_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b2ef08a_ARCHIVE_LOCATION">/home/nm/finn-example-ip/vivado/ip_repo</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.AP_CLK.FREQ_HZ" xilinx:valueSource="user"/>

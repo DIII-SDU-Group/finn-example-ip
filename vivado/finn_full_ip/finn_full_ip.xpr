@@ -36,6 +36,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../ip/finn_stitched_ip"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/memstream"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFIFO_0_epzy490c/project_StreamingFIFO_0/sol1/impl/verilog"/>
