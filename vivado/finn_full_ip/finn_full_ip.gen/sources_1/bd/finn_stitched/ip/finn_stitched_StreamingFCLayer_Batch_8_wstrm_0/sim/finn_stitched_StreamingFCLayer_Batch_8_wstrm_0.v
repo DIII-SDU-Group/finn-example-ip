@@ -92,7 +92,7 @@ output wire awready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite AWVALID" *)
 input wire awvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite AWADDR" *)
-input wire [14 : 0] awaddr;
+input wire [17 : 0] awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite AWPROT" *)
 input wire [2 : 0] awprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite WREADY" *)
@@ -114,7 +114,7 @@ output wire arready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite ARVALID" *)
 input wire arvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite ARADDR" *)
-input wire [14 : 0] araddr;
+input wire [17 : 0] araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite ARPROT" *)
 input wire [2 : 0] arprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite RREADY" *)
@@ -123,7 +123,7 @@ input wire rready;
 output wire rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite RRESP" *)
 output wire [1 : 0] rresp;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axilite, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000.000000, ID_WIDTH 0, ADDR_WIDTH 15, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN finn_stitched_ap_clk_0, NUM_READ_THREADS 1, NUM\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axilite, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000.000000, ID_WIDTH 0, ADDR_WIDTH 18, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN finn_stitched_ap_clk_0, NUM_READ_THREADS 1, NUM\
 _WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite RDATA" *)
 output wire [31 : 0] rdata;
@@ -138,17 +138,17 @@ output wire [7 : 0] m_axis_0_tdata;
   memstream #(
     .CONFIG_EN(1'B1),
     .NSTREAMS(1),
-    .MEM_DEPTH(8192),
+    .MEM_DEPTH(65536),
     .MEM_WIDTH(8),
-    .MEM_INIT("/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7z6hf082/"),
-    .RAM_STYLE("block"),
+    .MEM_INIT("/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7hh0wmho/"),
+    .RAM_STYLE("auto"),
     .STRM0_WIDTH(8),
     .STRM1_WIDTH(32),
     .STRM2_WIDTH(32),
     .STRM3_WIDTH(32),
     .STRM4_WIDTH(32),
     .STRM5_WIDTH(32),
-    .STRM0_DEPTH(8192),
+    .STRM0_DEPTH(65536),
     .STRM1_DEPTH(2304),
     .STRM2_DEPTH(2304),
     .STRM3_DEPTH(2304),
@@ -160,7 +160,7 @@ output wire [7 : 0] m_axis_0_tdata;
     .STRM3_OFFSET(6912),
     .STRM4_OFFSET(9216),
     .STRM5_OFFSET(11520),
-    .AXILITE_ADDR_WIDTH(15)
+    .AXILITE_ADDR_WIDTH(18)
   ) inst (
     .aclk(aclk),
     .aresetn(aresetn),

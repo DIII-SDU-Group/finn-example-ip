@@ -1146,7 +1146,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXILITE.ADDR_WIDTH">15</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXILITE.ADDR_WIDTH">18</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1505,7 +1505,7 @@
       <spirit:addressBlock>
         <spirit:name>reg0</spirit:name>
         <spirit:baseAddress spirit:format="bitString" spirit:resolve="user" spirit:bitStringLength="32">0</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="pow(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1) + 1)" spirit:minimum="4096" spirit:rangeType="long">32768</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="pow(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1) + 1)" spirit:minimum="4096" spirit:rangeType="long">262144</spirit:range>
         <spirit:width spirit:format="long" spirit:resolve="user">32</spirit:width>
         <spirit:usage>register</spirit:usage>
       </spirit:addressBlock>
@@ -1524,11 +1524,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 07 15:51:45 UTC 2022</spirit:value>
+            <spirit:value>Tue Feb 15 20:38:37 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:54e4c64f</spirit:value>
+            <spirit:value>9:8cc2eadc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1539,7 +1539,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:54e4c64f</spirit:value>
+            <spirit:value>9:8cc2eadc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1555,11 +1555,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 07 15:51:46 UTC 2022</spirit:value>
+            <spirit:value>Tue Feb 15 20:38:38 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:54e4c64f</spirit:value>
+            <spirit:value>9:8cc2eadc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1574,11 +1574,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 07 15:51:45 UTC 2022</spirit:value>
+            <spirit:value>Tue Feb 15 20:38:37 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dc0adc74</spirit:value>
+            <spirit:value>9:56e3d6b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1594,11 +1594,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 07 15:51:46 UTC 2022</spirit:value>
+            <spirit:value>Tue Feb 15 20:38:38 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dc0adc74</spirit:value>
+            <spirit:value>9:56e3d6b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1664,7 +1664,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">14</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">17</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1848,7 +1848,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">14</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">17</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2480,7 +2480,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MEM_DEPTH</spirit:name>
         <spirit:displayName>Mem Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MEM_DEPTH">8192</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MEM_DEPTH">65536</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MEM_WIDTH</spirit:name>
@@ -2490,12 +2490,12 @@
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>MEM_INIT</spirit:name>
         <spirit:displayName>Mem Init</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MEM_INIT">/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7z6hf082/</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MEM_INIT">/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7hh0wmho/</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>RAM_STYLE</spirit:name>
         <spirit:displayName>Ram Style</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RAM_STYLE">block</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RAM_STYLE">auto</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>STRM0_WIDTH</spirit:name>
@@ -2530,7 +2530,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>STRM0_DEPTH</spirit:name>
         <spirit:displayName>Strm0 Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.STRM0_DEPTH">8192</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.STRM0_DEPTH">65536</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>STRM1_DEPTH</spirit:name>
@@ -2590,7 +2590,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>AXILITE_ADDR_WIDTH</spirit:name>
         <spirit:displayName>Axilite Addr Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_ADDR_WIDTH" spirit:dependency="(2 + spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.MEM_DEPTH&apos;)) * (1 &lt;&lt; spirit:ceil(spirit:log(2,((spirit:decode(id(&apos;MODELPARAM_VALUE.MEM_WIDTH&apos;)) + 31) / 32))))))))">15</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_ADDR_WIDTH" spirit:dependency="(2 + spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.MEM_DEPTH&apos;)) * (1 &lt;&lt; spirit:ceil(spirit:log(2,((spirit:decode(id(&apos;MODELPARAM_VALUE.MEM_WIDTH&apos;)) + 31) / 32))))))))">18</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -2717,7 +2717,7 @@
     <spirit:parameter>
       <spirit:name>MEM_DEPTH</spirit:name>
       <spirit:displayName>Mem Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MEM_DEPTH">8192</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MEM_DEPTH">65536</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MEM_WIDTH</spirit:name>
@@ -2727,12 +2727,12 @@
     <spirit:parameter>
       <spirit:name>MEM_INIT</spirit:name>
       <spirit:displayName>Mem Init</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MEM_INIT">/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a1_resize_regression_V5_surgery/stitched_ip_vivado_proj/vivado_stitch_proj_or5_fmik/collected_src_files/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7z6hf082/</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MEM_INIT">/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7hh0wmho/</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RAM_STYLE</spirit:name>
       <spirit:displayName>Ram Style</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RAM_STYLE" spirit:choiceRef="choice_list_f3afab9b">block</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RAM_STYLE" spirit:choiceRef="choice_list_f3afab9b">auto</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>STRM0_WIDTH</spirit:name>
@@ -2767,7 +2767,7 @@
     <spirit:parameter>
       <spirit:name>STRM0_DEPTH</spirit:name>
       <spirit:displayName>Strm0 Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.STRM0_DEPTH">8192</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.STRM0_DEPTH">65536</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>STRM1_DEPTH</spirit:name>
@@ -2827,7 +2827,7 @@
     <spirit:parameter>
       <spirit:name>AXILITE_ADDR_WIDTH</spirit:name>
       <spirit:displayName>Axilite Addr Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXILITE_ADDR_WIDTH">15</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXILITE_ADDR_WIDTH">18</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
