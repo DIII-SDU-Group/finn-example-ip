@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <spirit:vendor>DIII</spirit:vendor>
+  <spirit:vendor>user.org</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>finn_stitched</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
-      <spirit:name>s_axis_0</spirit:name>
+      <spirit:name>s_axis</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -16,7 +16,7 @@
             <spirit:name>TDATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>s_axis_0_tdata</spirit:name>
+            <spirit:name>s_axis_tdata</spirit:name>
             <spirit:vector>
               <spirit:left spirit:format="long">7</spirit:left>
               <spirit:right spirit:format="long">0</spirit:right>
@@ -28,7 +28,7 @@
             <spirit:name>TVALID</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>s_axis_0_tvalid</spirit:name>
+            <spirit:name>s_axis_tvalid</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -36,51 +36,51 @@
             <spirit:name>TREADY</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>s_axis_0_tready</spirit:name>
+            <spirit:name>s_axis_tready</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.TDATA_NUM_BYTES">1</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.TDATA_NUM_BYTES">1</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TDEST_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.TDEST_WIDTH">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.TDEST_WIDTH">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TID_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.TID_WIDTH">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.TID_WIDTH">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.TUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.TUSER_WIDTH">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TREADY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TREADY">1</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.HAS_TREADY">1</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TSTRB</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TSTRB">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.HAS_TSTRB">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TKEEP</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TKEEP">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.HAS_TKEEP">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TLAST</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TLAST">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.HAS_TLAST">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_0.LAYERED_METADATA">undef</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS.LAYERED_METADATA">undef</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>m_axis_0</spirit:name>
+      <spirit:name>m_axis</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
       <spirit:master/>
@@ -90,7 +90,7 @@
             <spirit:name>TVALID</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>m_axis_0_tvalid</spirit:name>
+            <spirit:name>m_axis_tvalid</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -98,7 +98,7 @@
             <spirit:name>TREADY</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>m_axis_0_tready</spirit:name>
+            <spirit:name>m_axis_tready</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -106,7 +106,7 @@
             <spirit:name>TDATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>m_axis_0_tdata</spirit:name>
+            <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
               <spirit:left spirit:format="long">31</spirit:left>
               <spirit:right spirit:format="long">0</spirit:right>
@@ -117,39 +117,39 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.TDATA_NUM_BYTES">4</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES">4</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TDEST_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.TDEST_WIDTH">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDEST_WIDTH">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TID_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.TID_WIDTH">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.TID_WIDTH">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.TUSER_WIDTH">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.TUSER_WIDTH">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TREADY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TREADY">1</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TREADY">1</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TSTRB</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TSTRB">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TSTRB">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TKEEP</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TKEEP">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TKEEP">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TLAST</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TLAST">0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TLAST">0</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.LAYERED_METADATA">undef</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS.LAYERED_METADATA">undef</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -179,7 +179,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.AP_CLK.ASSOCIATED_BUSIF">s_axis_0:m_axis_0</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.AP_CLK.ASSOCIATED_BUSIF">s_axis:m_axis</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
@@ -240,9 +240,6 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_0_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_4_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_0_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -252,6 +249,9 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_1_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_6_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingMaxPool_Batch_0_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -259,9 +259,6 @@
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_2_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_8_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_FMPadding_Batch_1_1_0__ref_view_fileset</spirit:localName>
@@ -274,6 +271,9 @@
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_4_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_12_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_1_1_0__ref_view_fileset</spirit:localName>
@@ -291,9 +291,6 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_6_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_16_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_FMPadding_Batch_2_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -301,6 +298,9 @@
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_7_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_19_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_2_1_0__ref_view_fileset</spirit:localName>
@@ -411,10 +411,13 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_7_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_8_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_23_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_9_1_0__ref_view_fileset</spirit:localName>
@@ -425,7 +428,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>daa427e4</spirit:value>
+            <spirit:value>9eaa8f0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -457,9 +460,6 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_0_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_4_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_0_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -469,6 +469,9 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_1_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_6_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingMaxPool_Batch_0_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -476,9 +479,6 @@
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_2_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_8_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_FMPadding_Batch_1_1_0__ref_view_fileset</spirit:localName>
@@ -491,6 +491,9 @@
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_4_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_12_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_1_1_0__ref_view_fileset</spirit:localName>
@@ -508,9 +511,6 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_6_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_16_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_FMPadding_Batch_2_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -518,6 +518,9 @@
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_7_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_19_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_2_1_0__ref_view_fileset</spirit:localName>
@@ -628,10 +631,13 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_7_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_8_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_23_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_9_1_0__ref_view_fileset</spirit:localName>
@@ -642,7 +648,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>acaa0c71</spirit:value>
+            <spirit:value>43307f69</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -689,7 +695,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>m_axis_0_tdata</spirit:name>
+        <spirit:name>m_axis_tdata</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -706,7 +712,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>m_axis_0_tready</spirit:name>
+        <spirit:name>m_axis_tready</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -719,7 +725,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>m_axis_0_tvalid</spirit:name>
+        <spirit:name>m_axis_tvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -732,7 +738,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>s_axis_0_tdata</spirit:name>
+        <spirit:name>s_axis_tdata</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -749,7 +755,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>s_axis_0_tready</spirit:name>
+        <spirit:name>s_axis_tready</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -762,7 +768,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>s_axis_0_tvalid</spirit:name>
+        <spirit:name>s_axis_tvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -780,553 +786,565 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_0_2/finn_stitched_StreamingFIFO_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_0_3/finn_stitched_StreamingFIFO_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_Thresholding_Batch_0_2/finn_stitched_Thresholding_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_Thresholding_Batch_0_3/finn_stitched_Thresholding_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/Thresholding_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_1_0/finn_stitched_StreamingFIFO_1_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_1_1/finn_stitched_StreamingFIFO_1_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_0_0/finn_stitched_FMPadding_Batch_0_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_0_1/finn_stitched_FMPadding_Batch_0_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_32/finn_stitched_fifo_32.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_49/finn_stitched_fifo_49.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_2/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_0_1/finn_stitched_ConvolutionInputGenerator_0_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_0_2/finn_stitched_ConvolutionInputGenerator_0_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_0_2/finn_stitched_StreamingDataWidthConverter_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_0_3/finn_stitched_StreamingDataWidthConverter_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_4_0/finn_stitched_StreamingFIFO_4_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_50/finn_stitched_fifo_50.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_4</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_4/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_2/finn_stitched_StreamingFCLayer_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_3/finn_stitched_StreamingFCLayer_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_0/StreamingFCLayer_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_wstrm_1/finn_stitched_StreamingFCLayer_Batch_0_wstrm_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_wstrm_2/finn_stitched_StreamingFCLayer_Batch_0_wstrm_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_0/StreamingFCLayer_Batch_0_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_1_2/finn_stitched_StreamingDataWidthConverter_Batch_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_1_3/finn_stitched_StreamingDataWidthConverter_Batch_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_0_2/finn_stitched_StreamingMaxPool_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_6_0/finn_stitched_StreamingFIFO_6_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_0_3/finn_stitched_StreamingMaxPool_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_7_0/finn_stitched_StreamingFIFO_7_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_7_1/finn_stitched_StreamingFIFO_7_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_7</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_2_2/finn_stitched_StreamingDataWidthConverter_Batch_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_2_3/finn_stitched_StreamingDataWidthConverter_Batch_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_8_0/finn_stitched_StreamingFIFO_8_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_51/finn_stitched_fifo_51.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_8</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_8/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_1_1/finn_stitched_FMPadding_Batch_1_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_1_2/finn_stitched_FMPadding_Batch_1_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_3_2/finn_stitched_StreamingDataWidthConverter_Batch_3_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_3_3/finn_stitched_StreamingDataWidthConverter_Batch_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_33/finn_stitched_fifo_33.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_52/finn_stitched_fifo_52.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_10/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_1_2/finn_stitched_ConvolutionInputGenerator_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_1_3/finn_stitched_ConvolutionInputGenerator_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_4_0/finn_stitched_StreamingDataWidthConverter_Batch_4_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_4_1/finn_stitched_StreamingDataWidthConverter_Batch_4_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_34/finn_stitched_fifo_34.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_12_0/finn_stitched_StreamingFIFO_12_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_12/fifo</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_12</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_2/finn_stitched_StreamingFCLayer_Batch_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_3/finn_stitched_StreamingFCLayer_Batch_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_1/StreamingFCLayer_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_wstrm_2/finn_stitched_StreamingFCLayer_Batch_1_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_wstrm_3/finn_stitched_StreamingFCLayer_Batch_1_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_1/StreamingFCLayer_Batch_1_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_5_2/finn_stitched_StreamingDataWidthConverter_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_5_3/finn_stitched_StreamingDataWidthConverter_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_1_2/finn_stitched_StreamingMaxPool_Batch_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_1_3/finn_stitched_StreamingMaxPool_Batch_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_15_0/finn_stitched_StreamingFIFO_15_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_15_1/finn_stitched_StreamingFIFO_15_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_15</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_6_2/finn_stitched_StreamingDataWidthConverter_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_6_3/finn_stitched_StreamingDataWidthConverter_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_16_0/finn_stitched_StreamingFIFO_16_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_53/finn_stitched_fifo_53.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_16</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_16/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_2_2/finn_stitched_FMPadding_Batch_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_2_3/finn_stitched_FMPadding_Batch_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_35/finn_stitched_fifo_35.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_54/finn_stitched_fifo_54.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_17/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_2_2/finn_stitched_ConvolutionInputGenerator_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_2_3/finn_stitched_ConvolutionInputGenerator_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_7_2/finn_stitched_StreamingDataWidthConverter_Batch_7_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_7_3/finn_stitched_StreamingDataWidthConverter_Batch_7_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_7</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_36/finn_stitched_fifo_36.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_19_0/finn_stitched_StreamingFIFO_19_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_19/fifo</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_19</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_0/finn_stitched_StreamingFCLayer_Batch_2_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_1/finn_stitched_StreamingFCLayer_Batch_2_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_2/StreamingFCLayer_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_wstrm_2/finn_stitched_StreamingFCLayer_Batch_2_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_wstrm_3/finn_stitched_StreamingFCLayer_Batch_2_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_2/StreamingFCLayer_Batch_2_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_8_2/finn_stitched_StreamingDataWidthConverter_Batch_8_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_8_3/finn_stitched_StreamingDataWidthConverter_Batch_8_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_8</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_2_2/finn_stitched_StreamingMaxPool_Batch_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_2_3/finn_stitched_StreamingMaxPool_Batch_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_22_2/finn_stitched_StreamingFIFO_22_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_22_3/finn_stitched_StreamingFIFO_22_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_22</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_9_2/finn_stitched_StreamingDataWidthConverter_Batch_9_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_9_3/finn_stitched_StreamingDataWidthConverter_Batch_9_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_9</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_37/finn_stitched_fifo_37.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_55/finn_stitched_fifo_55.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_23/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_3_2/finn_stitched_FMPadding_Batch_3_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_3_3/finn_stitched_FMPadding_Batch_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_38/finn_stitched_fifo_38.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_56/finn_stitched_fifo_56.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_24/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_3_1/finn_stitched_ConvolutionInputGenerator_3_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_3_2/finn_stitched_ConvolutionInputGenerator_3_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_10_1/finn_stitched_StreamingDataWidthConverter_Batch_10_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_10_2/finn_stitched_StreamingDataWidthConverter_Batch_10_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_10</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_39/finn_stitched_fifo_39.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_57/finn_stitched_fifo_57.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_26/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_2/finn_stitched_StreamingFCLayer_Batch_3_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_3/finn_stitched_StreamingFCLayer_Batch_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_3/StreamingFCLayer_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_wstrm_2/finn_stitched_StreamingFCLayer_Batch_3_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_wstrm_3/finn_stitched_StreamingFCLayer_Batch_3_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_3/StreamingFCLayer_Batch_3_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_11_2/finn_stitched_StreamingDataWidthConverter_Batch_11_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_11_3/finn_stitched_StreamingDataWidthConverter_Batch_11_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_11</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_3_1/finn_stitched_StreamingMaxPool_Batch_3_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_3_2/finn_stitched_StreamingMaxPool_Batch_3_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_29_0/finn_stitched_StreamingFIFO_29_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_29_1/finn_stitched_StreamingFIFO_29_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_29</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_12_2/finn_stitched_StreamingDataWidthConverter_Batch_12_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_12_3/finn_stitched_StreamingDataWidthConverter_Batch_12_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_12</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_40/finn_stitched_fifo_40.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_58/finn_stitched_fifo_58.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_30/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_4_1/finn_stitched_FMPadding_Batch_4_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_4_2/finn_stitched_FMPadding_Batch_4_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_41/finn_stitched_fifo_41.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_59/finn_stitched_fifo_59.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_31/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_4_1/finn_stitched_ConvolutionInputGenerator_4_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_4_2/finn_stitched_ConvolutionInputGenerator_4_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_13_2/finn_stitched_StreamingDataWidthConverter_Batch_13_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_13_3/finn_stitched_StreamingDataWidthConverter_Batch_13_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_13</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_42/finn_stitched_fifo_42.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_60/finn_stitched_fifo_60.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_33/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_1/finn_stitched_StreamingFCLayer_Batch_4_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_2/finn_stitched_StreamingFCLayer_Batch_4_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_4/StreamingFCLayer_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_wstrm_2/finn_stitched_StreamingFCLayer_Batch_4_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_wstrm_3/finn_stitched_StreamingFCLayer_Batch_4_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_4/StreamingFCLayer_Batch_4_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_14_1/finn_stitched_StreamingDataWidthConverter_Batch_14_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_14_2/finn_stitched_StreamingDataWidthConverter_Batch_14_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_14</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_4_2/finn_stitched_StreamingMaxPool_Batch_4_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_4_3/finn_stitched_StreamingMaxPool_Batch_4_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_36_0/finn_stitched_StreamingFIFO_36_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_36_1/finn_stitched_StreamingFIFO_36_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_36</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_15_0/finn_stitched_StreamingDataWidthConverter_Batch_15_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_15_1/finn_stitched_StreamingDataWidthConverter_Batch_15_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_15</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_43/finn_stitched_fifo_43.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_61/finn_stitched_fifo_61.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_37/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_5_2/finn_stitched_FMPadding_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_5_3/finn_stitched_FMPadding_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_44/finn_stitched_fifo_44.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_62/finn_stitched_fifo_62.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_38/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_5_2/finn_stitched_ConvolutionInputGenerator_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_5_3/finn_stitched_ConvolutionInputGenerator_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_16_2/finn_stitched_StreamingDataWidthConverter_Batch_16_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_16_3/finn_stitched_StreamingDataWidthConverter_Batch_16_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_16</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_45/finn_stitched_fifo_45.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_63/finn_stitched_fifo_63.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_40/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_2/finn_stitched_StreamingFCLayer_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_3/finn_stitched_StreamingFCLayer_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_5/StreamingFCLayer_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_wstrm_2/finn_stitched_StreamingFCLayer_Batch_5_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_wstrm_3/finn_stitched_StreamingFCLayer_Batch_5_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_5/StreamingFCLayer_Batch_5_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_17_2/finn_stitched_StreamingDataWidthConverter_Batch_17_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_17_3/finn_stitched_StreamingDataWidthConverter_Batch_17_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_17</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_5_2/finn_stitched_StreamingMaxPool_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_5_3/finn_stitched_StreamingMaxPool_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_18_2/finn_stitched_StreamingDataWidthConverter_Batch_18_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_18_3/finn_stitched_StreamingDataWidthConverter_Batch_18_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_18</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_46/finn_stitched_fifo_46.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_64/finn_stitched_fifo_64.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_44/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_6_2/finn_stitched_FMPadding_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_6_3/finn_stitched_FMPadding_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_47/finn_stitched_fifo_47.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_65/finn_stitched_fifo_65.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_45/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_6_2/finn_stitched_ConvolutionInputGenerator_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_6_3/finn_stitched_ConvolutionInputGenerator_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_19_0/finn_stitched_StreamingDataWidthConverter_Batch_19_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_19_1/finn_stitched_StreamingDataWidthConverter_Batch_19_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_19</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_48/finn_stitched_fifo_48.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_66/finn_stitched_fifo_66.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_47/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_2/finn_stitched_StreamingFCLayer_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_3/finn_stitched_StreamingFCLayer_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_6/StreamingFCLayer_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_wstrm_2/finn_stitched_StreamingFCLayer_Batch_6_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_wstrm_3/finn_stitched_StreamingFCLayer_Batch_6_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_6/StreamingFCLayer_Batch_6_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_20_2/finn_stitched_StreamingDataWidthConverter_Batch_20_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_20_3/finn_stitched_StreamingDataWidthConverter_Batch_20_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_20</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_6_2/finn_stitched_StreamingMaxPool_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_6_3/finn_stitched_StreamingMaxPool_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_21_2/finn_stitched_StreamingDataWidthConverter_Batch_21_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_21_3/finn_stitched_StreamingDataWidthConverter_Batch_21_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_21</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_2/finn_stitched_StreamingFCLayer_Batch_7_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_3/finn_stitched_StreamingFCLayer_Batch_7_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_7/StreamingFCLayer_Batch_7</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_wstrm_2/finn_stitched_StreamingFCLayer_Batch_7_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_wstrm_3/finn_stitched_StreamingFCLayer_Batch_7_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_7/StreamingFCLayer_Batch_7_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_2/finn_stitched_StreamingFCLayer_Batch_8_2.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_wstrm_0/finn_stitched_StreamingFCLayer_Batch_8_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_22_2/finn_stitched_StreamingDataWidthConverter_Batch_22_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_22_3/finn_stitched_StreamingDataWidthConverter_Batch_22_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_22</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_2/finn_stitched_StreamingFCLayer_Batch_9_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_3/finn_stitched_StreamingFCLayer_Batch_8_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_wstrm_1/finn_stitched_StreamingFCLayer_Batch_8_wstrm_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8_wstrm</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_23_0/finn_stitched_StreamingDataWidthConverter_Batch_23_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_23</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_3/finn_stitched_StreamingFCLayer_Batch_9_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_9/StreamingFCLayer_Batch_9</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_wstrm_2/finn_stitched_StreamingFCLayer_Batch_9_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_wstrm_3/finn_stitched_StreamingFCLayer_Batch_9_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_9/StreamingFCLayer_Batch_9_wstrm</spirit:userFileType>
@@ -1341,8 +1359,12 @@
       <spirit:file>
         <spirit:name>src/finn_stitched.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_25ae3245</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_e89e894f</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1416,16 +1438,6 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_4_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_4" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_0_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -1456,6 +1468,16 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_6_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_6" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingMaxPool_Batch_0_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -1480,16 +1502,6 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_2" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_8_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_8" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1530,6 +1542,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_4" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_12_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_12" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1586,16 +1608,6 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_16_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_16" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_FMPadding_Batch_2_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -1620,6 +1632,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_7" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFIFO_19_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_19" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1986,6 +2008,16 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_22" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingFCLayer_Batch_8_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -1996,10 +2028,10 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:name>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_StreamingDataWidthConverter_Batch_23_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_22" xilinx:version="1.0">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_23" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -2018,553 +2050,565 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_0_2/finn_stitched_StreamingFIFO_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_0_3/finn_stitched_StreamingFIFO_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_Thresholding_Batch_0_2/finn_stitched_Thresholding_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_Thresholding_Batch_0_3/finn_stitched_Thresholding_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/Thresholding_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_1_0/finn_stitched_StreamingFIFO_1_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_1_1/finn_stitched_StreamingFIFO_1_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_0_0/finn_stitched_FMPadding_Batch_0_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_0_1/finn_stitched_FMPadding_Batch_0_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_32/finn_stitched_fifo_32.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_49/finn_stitched_fifo_49.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_2/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_0_1/finn_stitched_ConvolutionInputGenerator_0_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_0_2/finn_stitched_ConvolutionInputGenerator_0_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_0_2/finn_stitched_StreamingDataWidthConverter_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_0_3/finn_stitched_StreamingDataWidthConverter_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_4_0/finn_stitched_StreamingFIFO_4_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_50/finn_stitched_fifo_50.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_4</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_4/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_2/finn_stitched_StreamingFCLayer_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_3/finn_stitched_StreamingFCLayer_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_0/StreamingFCLayer_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_wstrm_1/finn_stitched_StreamingFCLayer_Batch_0_wstrm_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_0_wstrm_2/finn_stitched_StreamingFCLayer_Batch_0_wstrm_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_0/StreamingFCLayer_Batch_0_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_1_2/finn_stitched_StreamingDataWidthConverter_Batch_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_1_3/finn_stitched_StreamingDataWidthConverter_Batch_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_0_2/finn_stitched_StreamingMaxPool_Batch_0_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_6_0/finn_stitched_StreamingFIFO_6_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_0_3/finn_stitched_StreamingMaxPool_Batch_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_7_0/finn_stitched_StreamingFIFO_7_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_7_1/finn_stitched_StreamingFIFO_7_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_7</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_2_2/finn_stitched_StreamingDataWidthConverter_Batch_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_2_3/finn_stitched_StreamingDataWidthConverter_Batch_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_8_0/finn_stitched_StreamingFIFO_8_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_51/finn_stitched_fifo_51.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_8</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_8/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_1_1/finn_stitched_FMPadding_Batch_1_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_1_2/finn_stitched_FMPadding_Batch_1_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_3_2/finn_stitched_StreamingDataWidthConverter_Batch_3_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_3_3/finn_stitched_StreamingDataWidthConverter_Batch_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_33/finn_stitched_fifo_33.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_52/finn_stitched_fifo_52.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_10/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_1_2/finn_stitched_ConvolutionInputGenerator_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_1_3/finn_stitched_ConvolutionInputGenerator_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_4_0/finn_stitched_StreamingDataWidthConverter_Batch_4_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_4_1/finn_stitched_StreamingDataWidthConverter_Batch_4_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_34/finn_stitched_fifo_34.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_12_0/finn_stitched_StreamingFIFO_12_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_12/fifo</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_12</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_2/finn_stitched_StreamingFCLayer_Batch_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_3/finn_stitched_StreamingFCLayer_Batch_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_1/StreamingFCLayer_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_wstrm_2/finn_stitched_StreamingFCLayer_Batch_1_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_1_wstrm_3/finn_stitched_StreamingFCLayer_Batch_1_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_1/StreamingFCLayer_Batch_1_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_5_2/finn_stitched_StreamingDataWidthConverter_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_5_3/finn_stitched_StreamingDataWidthConverter_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_1_2/finn_stitched_StreamingMaxPool_Batch_1_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_1_3/finn_stitched_StreamingMaxPool_Batch_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_15_0/finn_stitched_StreamingFIFO_15_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_15_1/finn_stitched_StreamingFIFO_15_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_15</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_6_2/finn_stitched_StreamingDataWidthConverter_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_6_3/finn_stitched_StreamingDataWidthConverter_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_16_0/finn_stitched_StreamingFIFO_16_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_53/finn_stitched_fifo_53.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_16</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_16/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_2_2/finn_stitched_FMPadding_Batch_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_2_3/finn_stitched_FMPadding_Batch_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_35/finn_stitched_fifo_35.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_54/finn_stitched_fifo_54.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_17/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_2_2/finn_stitched_ConvolutionInputGenerator_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_2_3/finn_stitched_ConvolutionInputGenerator_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_7_2/finn_stitched_StreamingDataWidthConverter_Batch_7_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_7_3/finn_stitched_StreamingDataWidthConverter_Batch_7_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_7</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_36/finn_stitched_fifo_36.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_19_0/finn_stitched_StreamingFIFO_19_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_19/fifo</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_19</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_0/finn_stitched_StreamingFCLayer_Batch_2_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_1/finn_stitched_StreamingFCLayer_Batch_2_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_2/StreamingFCLayer_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_wstrm_2/finn_stitched_StreamingFCLayer_Batch_2_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_2_wstrm_3/finn_stitched_StreamingFCLayer_Batch_2_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_2/StreamingFCLayer_Batch_2_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_8_2/finn_stitched_StreamingDataWidthConverter_Batch_8_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_8_3/finn_stitched_StreamingDataWidthConverter_Batch_8_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_8</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_2_2/finn_stitched_StreamingMaxPool_Batch_2_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_2_3/finn_stitched_StreamingMaxPool_Batch_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_22_2/finn_stitched_StreamingFIFO_22_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_22_3/finn_stitched_StreamingFIFO_22_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_22</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_9_2/finn_stitched_StreamingDataWidthConverter_Batch_9_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_9_3/finn_stitched_StreamingDataWidthConverter_Batch_9_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_9</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_37/finn_stitched_fifo_37.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_55/finn_stitched_fifo_55.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_23/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_3_2/finn_stitched_FMPadding_Batch_3_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_3_3/finn_stitched_FMPadding_Batch_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_38/finn_stitched_fifo_38.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_56/finn_stitched_fifo_56.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_24/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_3_1/finn_stitched_ConvolutionInputGenerator_3_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_3_2/finn_stitched_ConvolutionInputGenerator_3_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_10_1/finn_stitched_StreamingDataWidthConverter_Batch_10_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_10_2/finn_stitched_StreamingDataWidthConverter_Batch_10_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_10</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_39/finn_stitched_fifo_39.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_57/finn_stitched_fifo_57.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_26/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_2/finn_stitched_StreamingFCLayer_Batch_3_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_3/finn_stitched_StreamingFCLayer_Batch_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_3/StreamingFCLayer_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_wstrm_2/finn_stitched_StreamingFCLayer_Batch_3_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_3_wstrm_3/finn_stitched_StreamingFCLayer_Batch_3_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_3/StreamingFCLayer_Batch_3_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_11_2/finn_stitched_StreamingDataWidthConverter_Batch_11_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_11_3/finn_stitched_StreamingDataWidthConverter_Batch_11_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_11</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_3_1/finn_stitched_StreamingMaxPool_Batch_3_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_3_2/finn_stitched_StreamingMaxPool_Batch_3_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_29_0/finn_stitched_StreamingFIFO_29_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_29_1/finn_stitched_StreamingFIFO_29_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_29</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_12_2/finn_stitched_StreamingDataWidthConverter_Batch_12_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_12_3/finn_stitched_StreamingDataWidthConverter_Batch_12_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_12</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_40/finn_stitched_fifo_40.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_58/finn_stitched_fifo_58.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_30/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_4_1/finn_stitched_FMPadding_Batch_4_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_4_2/finn_stitched_FMPadding_Batch_4_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_41/finn_stitched_fifo_41.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_59/finn_stitched_fifo_59.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_31/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_4_1/finn_stitched_ConvolutionInputGenerator_4_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_4_2/finn_stitched_ConvolutionInputGenerator_4_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_13_2/finn_stitched_StreamingDataWidthConverter_Batch_13_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_13_3/finn_stitched_StreamingDataWidthConverter_Batch_13_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_13</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_42/finn_stitched_fifo_42.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_60/finn_stitched_fifo_60.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_33/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_1/finn_stitched_StreamingFCLayer_Batch_4_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_2/finn_stitched_StreamingFCLayer_Batch_4_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_4/StreamingFCLayer_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_wstrm_2/finn_stitched_StreamingFCLayer_Batch_4_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_4_wstrm_3/finn_stitched_StreamingFCLayer_Batch_4_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_4/StreamingFCLayer_Batch_4_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_14_1/finn_stitched_StreamingDataWidthConverter_Batch_14_1.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_14_2/finn_stitched_StreamingDataWidthConverter_Batch_14_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_14</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_4_2/finn_stitched_StreamingMaxPool_Batch_4_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_4_3/finn_stitched_StreamingMaxPool_Batch_4_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_4</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFIFO_36_0/finn_stitched_StreamingFIFO_36_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFIFO_36_1/finn_stitched_StreamingFIFO_36_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_36</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_15_0/finn_stitched_StreamingDataWidthConverter_Batch_15_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_15_1/finn_stitched_StreamingDataWidthConverter_Batch_15_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_15</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_43/finn_stitched_fifo_43.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_61/finn_stitched_fifo_61.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_37/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_5_2/finn_stitched_FMPadding_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_5_3/finn_stitched_FMPadding_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_44/finn_stitched_fifo_44.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_62/finn_stitched_fifo_62.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_38/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_5_2/finn_stitched_ConvolutionInputGenerator_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_5_3/finn_stitched_ConvolutionInputGenerator_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_16_2/finn_stitched_StreamingDataWidthConverter_Batch_16_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_16_3/finn_stitched_StreamingDataWidthConverter_Batch_16_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_16</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_45/finn_stitched_fifo_45.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_63/finn_stitched_fifo_63.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_40/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_2/finn_stitched_StreamingFCLayer_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_3/finn_stitched_StreamingFCLayer_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_5/StreamingFCLayer_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_wstrm_2/finn_stitched_StreamingFCLayer_Batch_5_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_5_wstrm_3/finn_stitched_StreamingFCLayer_Batch_5_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_5/StreamingFCLayer_Batch_5_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_17_2/finn_stitched_StreamingDataWidthConverter_Batch_17_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_17_3/finn_stitched_StreamingDataWidthConverter_Batch_17_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_17</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_5_2/finn_stitched_StreamingMaxPool_Batch_5_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_5_3/finn_stitched_StreamingMaxPool_Batch_5_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_5</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_18_2/finn_stitched_StreamingDataWidthConverter_Batch_18_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_18_3/finn_stitched_StreamingDataWidthConverter_Batch_18_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_18</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_46/finn_stitched_fifo_46.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_64/finn_stitched_fifo_64.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_44/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_FMPadding_Batch_6_2/finn_stitched_FMPadding_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_FMPadding_Batch_6_3/finn_stitched_FMPadding_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/FMPadding_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_47/finn_stitched_fifo_47.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_65/finn_stitched_fifo_65.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_45/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_6_2/finn_stitched_ConvolutionInputGenerator_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_ConvolutionInputGenerator_6_3/finn_stitched_ConvolutionInputGenerator_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/ConvolutionInputGenerator_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_19_0/finn_stitched_StreamingDataWidthConverter_Batch_19_0.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_19_1/finn_stitched_StreamingDataWidthConverter_Batch_19_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_19</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_fifo_48/finn_stitched_fifo_48.xci</spirit:name>
+        <spirit:name>src/finn_stitched_fifo_66/finn_stitched_fifo_66.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFIFO_47/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_2/finn_stitched_StreamingFCLayer_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_3/finn_stitched_StreamingFCLayer_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_6/StreamingFCLayer_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_wstrm_2/finn_stitched_StreamingFCLayer_Batch_6_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_6_wstrm_3/finn_stitched_StreamingFCLayer_Batch_6_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_6/StreamingFCLayer_Batch_6_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_20_2/finn_stitched_StreamingDataWidthConverter_Batch_20_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_20_3/finn_stitched_StreamingDataWidthConverter_Batch_20_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_20</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_6_2/finn_stitched_StreamingMaxPool_Batch_6_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingMaxPool_Batch_6_3/finn_stitched_StreamingMaxPool_Batch_6_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingMaxPool_Batch_6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_21_2/finn_stitched_StreamingDataWidthConverter_Batch_21_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_21_3/finn_stitched_StreamingDataWidthConverter_Batch_21_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_21</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_2/finn_stitched_StreamingFCLayer_Batch_7_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_3/finn_stitched_StreamingFCLayer_Batch_7_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_7/StreamingFCLayer_Batch_7</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_wstrm_2/finn_stitched_StreamingFCLayer_Batch_7_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_7_wstrm_3/finn_stitched_StreamingFCLayer_Batch_7_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_7/StreamingFCLayer_Batch_7_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_2/finn_stitched_StreamingFCLayer_Batch_8_2.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_wstrm_0/finn_stitched_StreamingFCLayer_Batch_8_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_22_2/finn_stitched_StreamingDataWidthConverter_Batch_22_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_22_3/finn_stitched_StreamingDataWidthConverter_Batch_22_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_22</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_2/finn_stitched_StreamingFCLayer_Batch_9_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_3/finn_stitched_StreamingFCLayer_Batch_8_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_8_wstrm_1/finn_stitched_StreamingFCLayer_Batch_8_wstrm_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_8/StreamingFCLayer_Batch_8_wstrm</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingDataWidthConverter_Batch_23_0/finn_stitched_StreamingDataWidthConverter_Batch_23_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_finn_ip/StreamingDataWidthConverter_Batch_23</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_3/finn_stitched_StreamingFCLayer_Batch_9_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_9/StreamingFCLayer_Batch_9</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_wstrm_2/finn_stitched_StreamingFCLayer_Batch_9_wstrm_2.xci</spirit:name>
+        <spirit:name>src/finn_stitched_StreamingFCLayer_Batch_9_wstrm_3/finn_stitched_StreamingFCLayer_Batch_9_wstrm_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_finn_ip/StreamingFCLayer_Batch_9/StreamingFCLayer_Batch_9_wstrm</spirit:userFileType>
@@ -2573,13 +2617,17 @@
         <spirit:name>sim/finn_stitched.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_0_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_0" xilinx:version="1.0">
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_0" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -2646,16 +2694,6 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_4_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_4" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_0_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -2686,6 +2724,16 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_6_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_6" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingMaxPool_Batch_0_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -2710,16 +2758,6 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_2" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_8_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_8" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -2760,6 +2798,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_4" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_12_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_12" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -2816,16 +2864,6 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_16_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_16" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_FMPadding_Batch_2_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -2850,6 +2888,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_7" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFIFO_19_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingFIFO_19" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -3216,6 +3264,16 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_22" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingFCLayer_Batch_8_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -3226,10 +3284,10 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_22_1_0__ref_view_fileset</spirit:name>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_StreamingDataWidthConverter_Batch_23_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_22" xilinx:version="1.0">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="StreamingDataWidthConverter_Batch_23" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -3272,50 +3330,35 @@
       </xilinx:taxonomies>
       <xilinx:displayName>finn_stitched_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
-      <xilinx:vendorDisplayName>DIII</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-02-15T20:48:05Z</xilinx:coreCreationDateTime>
-      <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@67a54501_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@517044b_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d159a97_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e09126d_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@447ab360_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d9885d6_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@49591ef5_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eaf8b16_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@751fb39f_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6538abd1_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7426ef2b_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6902a4aa_ARCHIVE_LOCATION">/home/nm/finn-example-ip/ip/finn_stitched_ip</xilinx:tag>
-      </xilinx:tags>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-02-17T15:11:59Z</xilinx:coreCreationDateTime>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.AP_CLK.FREQ_HZ" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TKEEP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TLAST" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TREADY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.HAS_TSTRB" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.LAYERED_METADATA" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.TDATA_NUM_BYTES" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.TDEST_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.TID_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.TUSER_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TKEEP" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TLAST" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TREADY" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.HAS_TSTRB" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.LAYERED_METADATA" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.TDATA_NUM_BYTES" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.TDEST_WIDTH" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.TID_WIDTH" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_0.TUSER_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TKEEP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TLAST" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TREADY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TSTRB" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TDEST_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TID_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TUSER_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TKEEP" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TLAST" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TREADY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TSTRB" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.LAYERED_METADATA" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDEST_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TID_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TUSER_WIDTH" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="ec2d0145"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b9c47fbe"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="5988ad81"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="912d603e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="33315e09"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="cdb47c72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="85818a22"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

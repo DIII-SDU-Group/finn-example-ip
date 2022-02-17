@@ -3,7 +3,7 @@
 ip_folder=$1
 cd $ip_folder
 
-wget https://nextcloud.sdu.dk/index.php/s/HJCYA6GJNgRAQK8/download/src_ips.zip
+wget https://nextcloud.sdu.dk/index.php/s/gxG8MfZrTDNgjBE/download/src_ips.zip
 unzip src_ips.zip
 rm src_ips.zip
 

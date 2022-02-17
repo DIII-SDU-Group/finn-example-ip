@@ -168,9 +168,9 @@ proc create_hier_cell_StreamingFIFO_47 { parentCell nameHier } {
   # Create instance: fifo, and set properties
   set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
   set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {16384} \
+   CONFIG.FIFO_DEPTH {8192} \
    CONFIG.FIFO_MEMORY_TYPE {auto} \
-   CONFIG.TDATA_NUM_BYTES {1} \
+   CONFIG.TDATA_NUM_BYTES {2} \
  ] $fifo
 
   # Create interface connections
@@ -360,9 +360,9 @@ proc create_hier_cell_StreamingFIFO_40 { parentCell nameHier } {
   # Create instance: fifo, and set properties
   set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
   set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {8192} \
+   CONFIG.FIFO_DEPTH {16384} \
    CONFIG.FIFO_MEMORY_TYPE {auto} \
-   CONFIG.TDATA_NUM_BYTES {3} \
+   CONFIG.TDATA_NUM_BYTES {2} \
  ] $fifo
 
   # Create interface connections
@@ -554,7 +554,7 @@ proc create_hier_cell_StreamingFIFO_33 { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.FIFO_DEPTH {4096} \
    CONFIG.FIFO_MEMORY_TYPE {auto} \
-   CONFIG.TDATA_NUM_BYTES {6} \
+   CONFIG.TDATA_NUM_BYTES {4} \
  ] $fifo
 
   # Create interface connections
@@ -744,9 +744,9 @@ proc create_hier_cell_StreamingFIFO_26 { parentCell nameHier } {
   # Create instance: fifo, and set properties
   set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
   set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {2048} \
+   CONFIG.FIFO_DEPTH {8192} \
    CONFIG.FIFO_MEMORY_TYPE {auto} \
-   CONFIG.TDATA_NUM_BYTES {12} \
+   CONFIG.TDATA_NUM_BYTES {4} \
  ] $fifo
 
   # Create interface connections
@@ -889,70 +889,6 @@ proc create_hier_cell_StreamingFIFO_23 { parentCell nameHier } {
   current_bd_instance $oldCurInst
 }
 
-# Hierarchical cell: StreamingFIFO_19
-proc create_hier_cell_StreamingFIFO_19 { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_StreamingFIFO_19() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 in0_V
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 out_V
-
-
-  # Create pins
-  create_bd_pin -dir I -type clk ap_clk
-  create_bd_pin -dir I -type rst ap_rst_n
-
-  # Create instance: fifo, and set properties
-  set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
-  set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {512} \
-   CONFIG.FIFO_MEMORY_TYPE {auto} \
-   CONFIG.TDATA_NUM_BYTES {24} \
- ] $fifo
-
-  # Create interface connections
-  connect_bd_intf_net -intf_net fifo_M_AXIS [get_bd_intf_pins out_V] [get_bd_intf_pins fifo/M_AXIS]
-  connect_bd_intf_net -intf_net in0_V_1 [get_bd_intf_pins in0_V] [get_bd_intf_pins fifo/S_AXIS]
-
-  # Create port connections
-  connect_bd_net -net ap_clk_1 [get_bd_pins ap_clk] [get_bd_pins fifo/s_axis_aclk]
-  connect_bd_net -net ap_rst_n_1 [get_bd_pins ap_rst_n] [get_bd_pins fifo/s_axis_aresetn]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
-
 # Hierarchical cell: StreamingFIFO_17
 proc create_hier_cell_StreamingFIFO_17 { parentCell nameHier } {
 
@@ -1017,13 +953,13 @@ proc create_hier_cell_StreamingFIFO_17 { parentCell nameHier } {
   current_bd_instance $oldCurInst
 }
 
-# Hierarchical cell: StreamingFIFO_12
-proc create_hier_cell_StreamingFIFO_12 { parentCell nameHier } {
+# Hierarchical cell: StreamingFIFO_16
+proc create_hier_cell_StreamingFIFO_16 { parentCell nameHier } {
 
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_StreamingFIFO_12() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_StreamingFIFO_16() - Empty argument(s)!"}
      return
   }
 
@@ -1064,9 +1000,9 @@ proc create_hier_cell_StreamingFIFO_12 { parentCell nameHier } {
   # Create instance: fifo, and set properties
   set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
   set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {1024} \
+   CONFIG.FIFO_DEPTH {512} \
    CONFIG.FIFO_MEMORY_TYPE {auto} \
-   CONFIG.TDATA_NUM_BYTES {48} \
+   CONFIG.TDATA_NUM_BYTES {1} \
  ] $fifo
 
   # Create interface connections
@@ -1145,6 +1081,134 @@ proc create_hier_cell_StreamingFIFO_10 { parentCell nameHier } {
   current_bd_instance $oldCurInst
 }
 
+# Hierarchical cell: StreamingFIFO_8
+proc create_hier_cell_StreamingFIFO_8 { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_StreamingFIFO_8() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 in0_V
+
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 out_V
+
+
+  # Create pins
+  create_bd_pin -dir I -type clk ap_clk
+  create_bd_pin -dir I -type rst ap_rst_n
+
+  # Create instance: fifo, and set properties
+  set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
+  set_property -dict [ list \
+   CONFIG.FIFO_DEPTH {1024} \
+   CONFIG.FIFO_MEMORY_TYPE {auto} \
+   CONFIG.TDATA_NUM_BYTES {1} \
+ ] $fifo
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net fifo_M_AXIS [get_bd_intf_pins out_V] [get_bd_intf_pins fifo/M_AXIS]
+  connect_bd_intf_net -intf_net in0_V_1 [get_bd_intf_pins in0_V] [get_bd_intf_pins fifo/S_AXIS]
+
+  # Create port connections
+  connect_bd_net -net ap_clk_1 [get_bd_pins ap_clk] [get_bd_pins fifo/s_axis_aclk]
+  connect_bd_net -net ap_rst_n_1 [get_bd_pins ap_rst_n] [get_bd_pins fifo/s_axis_aresetn]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+
+# Hierarchical cell: StreamingFIFO_4
+proc create_hier_cell_StreamingFIFO_4 { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_StreamingFIFO_4() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 in0_V
+
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 out_V
+
+
+  # Create pins
+  create_bd_pin -dir I -type clk ap_clk
+  create_bd_pin -dir I -type rst ap_rst_n
+
+  # Create instance: fifo, and set properties
+  set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
+  set_property -dict [ list \
+   CONFIG.FIFO_DEPTH {2048} \
+   CONFIG.FIFO_MEMORY_TYPE {auto} \
+   CONFIG.TDATA_NUM_BYTES {3} \
+ ] $fifo
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net fifo_M_AXIS [get_bd_intf_pins out_V] [get_bd_intf_pins fifo/M_AXIS]
+  connect_bd_intf_net -intf_net in0_V_1 [get_bd_intf_pins in0_V] [get_bd_intf_pins fifo/S_AXIS]
+
+  # Create port connections
+  connect_bd_net -net ap_clk_1 [get_bd_pins ap_clk] [get_bd_pins fifo/s_axis_aclk]
+  connect_bd_net -net ap_rst_n_1 [get_bd_pins ap_rst_n] [get_bd_pins fifo/s_axis_aresetn]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+
 # Hierarchical cell: StreamingFIFO_2
 proc create_hier_cell_StreamingFIFO_2 { parentCell nameHier } {
 
@@ -1192,7 +1256,7 @@ proc create_hier_cell_StreamingFIFO_2 { parentCell nameHier } {
   # Create instance: fifo, and set properties
   set fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 fifo ]
   set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {2048} \
+   CONFIG.FIFO_DEPTH {4096} \
    CONFIG.FIFO_MEMORY_TYPE {auto} \
    CONFIG.TDATA_NUM_BYTES {1} \
  ] $fifo
@@ -1260,7 +1324,7 @@ proc create_hier_cell_StreamingFCLayer_Batch_9 { parentCell nameHier } {
   set StreamingFCLayer_Batch_9_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_9_wstrm ]
   set_property -dict [ list \
    CONFIG.MEM_DEPTH {64} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_9_mdxkc4ik/} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_9_a_k80z9h/} \
    CONFIG.MEM_WIDTH {16} \
    CONFIG.NSTREAMS {1} \
    CONFIG.RAM_STYLE {distributed} \
@@ -1332,12 +1396,12 @@ proc create_hier_cell_StreamingFCLayer_Batch_8 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_8_wstrm, and set properties
   set StreamingFCLayer_Batch_8_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_8_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {65536} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_7hh0wmho/} \
+   CONFIG.MEM_DEPTH {8192} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_8_pmijdtqk/} \
    CONFIG.MEM_WIDTH {8} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {65536} \
+   CONFIG.RAM_STYLE {block} \
+   CONFIG.STRM0_DEPTH {8192} \
    CONFIG.STRM0_OFFSET {0} \
    CONFIG.STRM0_WIDTH {8} \
  ] $StreamingFCLayer_Batch_8_wstrm
@@ -1405,12 +1469,12 @@ proc create_hier_cell_StreamingFCLayer_Batch_7 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_7_wstrm, and set properties
   set StreamingFCLayer_Batch_7_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_7_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {262144} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_7_krjwq3kd/} \
+   CONFIG.MEM_DEPTH {65536} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_7_ifvft2ge/} \
    CONFIG.MEM_WIDTH {8} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {262144} \
+   CONFIG.RAM_STYLE {block} \
+   CONFIG.STRM0_DEPTH {65536} \
    CONFIG.STRM0_OFFSET {0} \
    CONFIG.STRM0_WIDTH {8} \
  ] $StreamingFCLayer_Batch_7_wstrm
@@ -1478,12 +1542,12 @@ proc create_hier_cell_StreamingFCLayer_Batch_6 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_6_wstrm, and set properties
   set StreamingFCLayer_Batch_6_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_6_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {196608} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_6_93z2oe9p/} \
+   CONFIG.MEM_DEPTH {73728} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_6_h23mbxdx/} \
    CONFIG.MEM_WIDTH {8} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {196608} \
+   CONFIG.RAM_STYLE {block} \
+   CONFIG.STRM0_DEPTH {73728} \
    CONFIG.STRM0_OFFSET {0} \
    CONFIG.STRM0_WIDTH {8} \
  ] $StreamingFCLayer_Batch_6_wstrm
@@ -1551,12 +1615,12 @@ proc create_hier_cell_StreamingFCLayer_Batch_5 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_5_wstrm, and set properties
   set StreamingFCLayer_Batch_5_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_5_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {49152} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_5_m8dxwovd/} \
+   CONFIG.MEM_DEPTH {36864} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_5_u8mvjgu2/} \
    CONFIG.MEM_WIDTH {16} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {49152} \
+   CONFIG.RAM_STYLE {block} \
+   CONFIG.STRM0_DEPTH {36864} \
    CONFIG.STRM0_OFFSET {0} \
    CONFIG.STRM0_WIDTH {16} \
  ] $StreamingFCLayer_Batch_5_wstrm
@@ -1624,14 +1688,14 @@ proc create_hier_cell_StreamingFCLayer_Batch_4 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_4_wstrm, and set properties
   set StreamingFCLayer_Batch_4_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_4_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {12288} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_4_xbqw3vzp/} \
-   CONFIG.MEM_WIDTH {24} \
+   CONFIG.MEM_DEPTH {9216} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_4_yxvt0poh/} \
+   CONFIG.MEM_WIDTH {32} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {12288} \
+   CONFIG.RAM_STYLE {block} \
+   CONFIG.STRM0_DEPTH {9216} \
    CONFIG.STRM0_OFFSET {0} \
-   CONFIG.STRM0_WIDTH {24} \
+   CONFIG.STRM0_WIDTH {32} \
  ] $StreamingFCLayer_Batch_4_wstrm
 
   # Create interface connections
@@ -1697,14 +1761,14 @@ proc create_hier_cell_StreamingFCLayer_Batch_3 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_3_wstrm, and set properties
   set StreamingFCLayer_Batch_3_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_3_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {3072} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_3__0srt0fi/} \
-   CONFIG.MEM_WIDTH {48} \
+   CONFIG.MEM_DEPTH {2304} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_3_rdf8am5y/} \
+   CONFIG.MEM_WIDTH {64} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {3072} \
+   CONFIG.RAM_STYLE {distributed} \
+   CONFIG.STRM0_DEPTH {2304} \
    CONFIG.STRM0_OFFSET {0} \
-   CONFIG.STRM0_WIDTH {48} \
+   CONFIG.STRM0_WIDTH {64} \
  ] $StreamingFCLayer_Batch_3_wstrm
 
   # Create interface connections
@@ -1770,14 +1834,14 @@ proc create_hier_cell_StreamingFCLayer_Batch_2 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_2_wstrm, and set properties
   set StreamingFCLayer_Batch_2_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_2_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {768} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_2_pnhtmc4i/} \
-   CONFIG.MEM_WIDTH {96} \
+   CONFIG.MEM_DEPTH {576} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_2_9ao_flvf/} \
+   CONFIG.MEM_WIDTH {128} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {768} \
+   CONFIG.RAM_STYLE {distributed} \
+   CONFIG.STRM0_DEPTH {576} \
    CONFIG.STRM0_OFFSET {0} \
-   CONFIG.STRM0_WIDTH {96} \
+   CONFIG.STRM0_WIDTH {128} \
  ] $StreamingFCLayer_Batch_2_wstrm
 
   # Create interface connections
@@ -1843,14 +1907,14 @@ proc create_hier_cell_StreamingFCLayer_Batch_1 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_1_wstrm, and set properties
   set StreamingFCLayer_Batch_1_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_1_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {192} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_1_walzr8jx/} \
-   CONFIG.MEM_WIDTH {192} \
+   CONFIG.MEM_DEPTH {144} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_1_ngxwpf97/} \
+   CONFIG.MEM_WIDTH {256} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {192} \
+   CONFIG.RAM_STYLE {distributed} \
+   CONFIG.STRM0_DEPTH {144} \
    CONFIG.STRM0_OFFSET {0} \
-   CONFIG.STRM0_WIDTH {192} \
+   CONFIG.STRM0_WIDTH {256} \
  ] $StreamingFCLayer_Batch_1_wstrm
 
   # Create interface connections
@@ -1916,14 +1980,14 @@ proc create_hier_cell_StreamingFCLayer_Batch_0 { parentCell nameHier } {
   # Create instance: StreamingFCLayer_Batch_0_wstrm, and set properties
   set StreamingFCLayer_Batch_0_wstrm [ create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 StreamingFCLayer_Batch_0_wstrm ]
   set_property -dict [ list \
-   CONFIG.MEM_DEPTH {32} \
-   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_30FPS_single_output/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_0_nyvaezz1/} \
-   CONFIG.MEM_WIDTH {56} \
+   CONFIG.MEM_DEPTH {36} \
+   CONFIG.MEM_INIT {/home/nm/FINN/hls_2020_2/finn/notebooks/end2end_example/cnv_w1a2_resize_regression_ressource/source_IPs/src_ips/code_gen_ipgen_StreamingFCLayer_Batch_0_kivh_mzu/} \
+   CONFIG.MEM_WIDTH {48} \
    CONFIG.NSTREAMS {1} \
-   CONFIG.RAM_STYLE {auto} \
-   CONFIG.STRM0_DEPTH {32} \
+   CONFIG.RAM_STYLE {distributed} \
+   CONFIG.STRM0_DEPTH {36} \
    CONFIG.STRM0_OFFSET {0} \
-   CONFIG.STRM0_WIDTH {56} \
+   CONFIG.STRM0_WIDTH {48} \
  ] $StreamingFCLayer_Batch_0_wstrm
 
   # Create interface connections
@@ -2094,6 +2158,9 @@ proc create_hier_cell_finn_ip { parentCell nameHier } {
   # Create instance: StreamingDataWidthConverter_Batch_22, and set properties
   set StreamingDataWidthConverter_Batch_22 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataWidthConverter_Batch_22:1.0 StreamingDataWidthConverter_Batch_22 ]
 
+  # Create instance: StreamingDataWidthConverter_Batch_23, and set properties
+  set StreamingDataWidthConverter_Batch_23 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataWidthConverter_Batch_23:1.0 StreamingDataWidthConverter_Batch_23 ]
+
   # Create instance: StreamingFCLayer_Batch_0
   create_hier_cell_StreamingFCLayer_Batch_0 $hier_obj StreamingFCLayer_Batch_0
 
@@ -2133,32 +2200,35 @@ proc create_hier_cell_finn_ip { parentCell nameHier } {
   # Create instance: StreamingFIFO_2
   create_hier_cell_StreamingFIFO_2 $hier_obj StreamingFIFO_2
 
-  # Create instance: StreamingFIFO_4, and set properties
-  set StreamingFIFO_4 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_4:1.0 StreamingFIFO_4 ]
+  # Create instance: StreamingFIFO_4
+  create_hier_cell_StreamingFIFO_4 $hier_obj StreamingFIFO_4
+
+  # Create instance: StreamingFIFO_6, and set properties
+  set StreamingFIFO_6 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_6:1.0 StreamingFIFO_6 ]
 
   # Create instance: StreamingFIFO_7, and set properties
   set StreamingFIFO_7 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_7:1.0 StreamingFIFO_7 ]
 
-  # Create instance: StreamingFIFO_8, and set properties
-  set StreamingFIFO_8 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_8:1.0 StreamingFIFO_8 ]
+  # Create instance: StreamingFIFO_8
+  create_hier_cell_StreamingFIFO_8 $hier_obj StreamingFIFO_8
 
   # Create instance: StreamingFIFO_10
   create_hier_cell_StreamingFIFO_10 $hier_obj StreamingFIFO_10
 
-  # Create instance: StreamingFIFO_12
-  create_hier_cell_StreamingFIFO_12 $hier_obj StreamingFIFO_12
+  # Create instance: StreamingFIFO_12, and set properties
+  set StreamingFIFO_12 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_12:1.0 StreamingFIFO_12 ]
 
   # Create instance: StreamingFIFO_15, and set properties
   set StreamingFIFO_15 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_15:1.0 StreamingFIFO_15 ]
 
-  # Create instance: StreamingFIFO_16, and set properties
-  set StreamingFIFO_16 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_16:1.0 StreamingFIFO_16 ]
+  # Create instance: StreamingFIFO_16
+  create_hier_cell_StreamingFIFO_16 $hier_obj StreamingFIFO_16
 
   # Create instance: StreamingFIFO_17
   create_hier_cell_StreamingFIFO_17 $hier_obj StreamingFIFO_17
 
-  # Create instance: StreamingFIFO_19
-  create_hier_cell_StreamingFIFO_19 $hier_obj StreamingFIFO_19
+  # Create instance: StreamingFIFO_19, and set properties
+  set StreamingFIFO_19 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_19:1.0 StreamingFIFO_19 ]
 
   # Create instance: StreamingFIFO_22, and set properties
   set StreamingFIFO_22 [ create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingFIFO_22:1.0 StreamingFIFO_22 ]
@@ -2255,10 +2325,11 @@ proc create_hier_cell_finn_ip { parentCell nameHier } {
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_17_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_17/out_V] [get_bd_intf_pins StreamingMaxPool_Batch_5/in0_V]
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_18_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_18/out_V] [get_bd_intf_pins StreamingFIFO_44/in0_V]
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_19_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_19/out_V] [get_bd_intf_pins StreamingFIFO_47/in0_V]
-  connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_1_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_1/out_V] [get_bd_intf_pins StreamingMaxPool_Batch_0/in0_V]
+  connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_1_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_1/out_V] [get_bd_intf_pins StreamingFIFO_6/in0_V]
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_20_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_20/out_V] [get_bd_intf_pins StreamingMaxPool_Batch_6/in0_V]
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_21_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_21/out_V] [get_bd_intf_pins StreamingFCLayer_Batch_7/in0_V]
-  connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_22_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_22/out_V] [get_bd_intf_pins StreamingFCLayer_Batch_9/in0_V]
+  connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_22_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_22/out_V] [get_bd_intf_pins StreamingFCLayer_Batch_8/in0_V]
+  connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_23_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_23/out_V] [get_bd_intf_pins StreamingFCLayer_Batch_9/in0_V]
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_2_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_2/out_V] [get_bd_intf_pins StreamingFIFO_8/in0_V]
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_3_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_3/out_V] [get_bd_intf_pins StreamingFIFO_10/in0_V]
   connect_bd_intf_net -intf_net StreamingDataWidthConverter_Batch_4_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_4/out_V] [get_bd_intf_pins StreamingFIFO_12/in0_V]
@@ -2274,8 +2345,8 @@ proc create_hier_cell_finn_ip { parentCell nameHier } {
   connect_bd_intf_net -intf_net StreamingFCLayer_Batch_4_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_14/in0_V] [get_bd_intf_pins StreamingFCLayer_Batch_4/out_V]
   connect_bd_intf_net -intf_net StreamingFCLayer_Batch_5_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_17/in0_V] [get_bd_intf_pins StreamingFCLayer_Batch_5/out_V]
   connect_bd_intf_net -intf_net StreamingFCLayer_Batch_6_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_20/in0_V] [get_bd_intf_pins StreamingFCLayer_Batch_6/out_V]
-  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_7_out_V [get_bd_intf_pins StreamingFCLayer_Batch_7/out_V] [get_bd_intf_pins StreamingFCLayer_Batch_8/in0_V]
-  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_8_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_22/in0_V] [get_bd_intf_pins StreamingFCLayer_Batch_8/out_V]
+  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_7_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_22/in0_V] [get_bd_intf_pins StreamingFCLayer_Batch_7/out_V]
+  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_8_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_23/in0_V] [get_bd_intf_pins StreamingFCLayer_Batch_8/out_V]
   connect_bd_intf_net -intf_net StreamingFCLayer_Batch_9_out_V [get_bd_intf_pins m_axis_0] [get_bd_intf_pins StreamingFCLayer_Batch_9/out_V]
   connect_bd_intf_net -intf_net StreamingFIFO_0_out_V [get_bd_intf_pins StreamingFIFO_0/out_V] [get_bd_intf_pins Thresholding_Batch_0/in0_V]
   connect_bd_intf_net -intf_net StreamingFIFO_10_out_V [get_bd_intf_pins ConvolutionInputGenerator_1/in0_V] [get_bd_intf_pins StreamingFIFO_10/out_V]
@@ -2302,6 +2373,7 @@ proc create_hier_cell_finn_ip { parentCell nameHier } {
   connect_bd_intf_net -intf_net StreamingFIFO_45_out_V [get_bd_intf_pins ConvolutionInputGenerator_6/in0_V] [get_bd_intf_pins StreamingFIFO_45/out_V]
   connect_bd_intf_net -intf_net StreamingFIFO_47_out_V [get_bd_intf_pins StreamingFCLayer_Batch_6/in0_V] [get_bd_intf_pins StreamingFIFO_47/out_V]
   connect_bd_intf_net -intf_net StreamingFIFO_4_out_V [get_bd_intf_pins StreamingFCLayer_Batch_0/in0_V] [get_bd_intf_pins StreamingFIFO_4/out_V]
+  connect_bd_intf_net -intf_net StreamingFIFO_6_out_V [get_bd_intf_pins StreamingFIFO_6/out_V] [get_bd_intf_pins StreamingMaxPool_Batch_0/in0_V]
   connect_bd_intf_net -intf_net StreamingFIFO_7_out_V [get_bd_intf_pins StreamingDataWidthConverter_Batch_2/in0_V] [get_bd_intf_pins StreamingFIFO_7/out_V]
   connect_bd_intf_net -intf_net StreamingFIFO_8_out_V [get_bd_intf_pins FMPadding_Batch_1/in0_V] [get_bd_intf_pins StreamingFIFO_8/out_V]
   connect_bd_intf_net -intf_net StreamingMaxPool_Batch_0_out_V [get_bd_intf_pins StreamingFIFO_7/in0_V] [get_bd_intf_pins StreamingMaxPool_Batch_0/out_V]
@@ -2315,8 +2387,8 @@ proc create_hier_cell_finn_ip { parentCell nameHier } {
   connect_bd_intf_net -intf_net in0_V_0_1 [get_bd_intf_pins s_axis_0] [get_bd_intf_pins StreamingFIFO_0/in0_V]
 
   # Create port connections
-  connect_bd_net -net ap_clk_0_1 [get_bd_pins ap_clk] [get_bd_pins ConvolutionInputGenerator_0/ap_clk] [get_bd_pins ConvolutionInputGenerator_1/ap_clk] [get_bd_pins ConvolutionInputGenerator_2/ap_clk] [get_bd_pins ConvolutionInputGenerator_3/ap_clk] [get_bd_pins ConvolutionInputGenerator_4/ap_clk] [get_bd_pins ConvolutionInputGenerator_5/ap_clk] [get_bd_pins ConvolutionInputGenerator_6/ap_clk] [get_bd_pins FMPadding_Batch_0/ap_clk] [get_bd_pins FMPadding_Batch_1/ap_clk] [get_bd_pins FMPadding_Batch_2/ap_clk] [get_bd_pins FMPadding_Batch_3/ap_clk] [get_bd_pins FMPadding_Batch_4/ap_clk] [get_bd_pins FMPadding_Batch_5/ap_clk] [get_bd_pins FMPadding_Batch_6/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_0/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_1/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_10/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_11/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_12/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_13/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_14/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_15/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_16/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_17/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_18/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_19/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_2/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_20/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_21/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_22/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_3/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_4/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_5/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_6/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_7/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_8/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_9/ap_clk] [get_bd_pins StreamingFCLayer_Batch_0/ap_clk] [get_bd_pins StreamingFCLayer_Batch_1/ap_clk] [get_bd_pins StreamingFCLayer_Batch_2/ap_clk] [get_bd_pins StreamingFCLayer_Batch_3/ap_clk] [get_bd_pins StreamingFCLayer_Batch_4/ap_clk] [get_bd_pins StreamingFCLayer_Batch_5/ap_clk] [get_bd_pins StreamingFCLayer_Batch_6/ap_clk] [get_bd_pins StreamingFCLayer_Batch_7/ap_clk] [get_bd_pins StreamingFCLayer_Batch_8/ap_clk] [get_bd_pins StreamingFCLayer_Batch_9/ap_clk] [get_bd_pins StreamingFIFO_0/ap_clk] [get_bd_pins StreamingFIFO_1/ap_clk] [get_bd_pins StreamingFIFO_10/ap_clk] [get_bd_pins StreamingFIFO_12/ap_clk] [get_bd_pins StreamingFIFO_15/ap_clk] [get_bd_pins StreamingFIFO_16/ap_clk] [get_bd_pins StreamingFIFO_17/ap_clk] [get_bd_pins StreamingFIFO_19/ap_clk] [get_bd_pins StreamingFIFO_2/ap_clk] [get_bd_pins StreamingFIFO_22/ap_clk] [get_bd_pins StreamingFIFO_23/ap_clk] [get_bd_pins StreamingFIFO_24/ap_clk] [get_bd_pins StreamingFIFO_26/ap_clk] [get_bd_pins StreamingFIFO_29/ap_clk] [get_bd_pins StreamingFIFO_30/ap_clk] [get_bd_pins StreamingFIFO_31/ap_clk] [get_bd_pins StreamingFIFO_33/ap_clk] [get_bd_pins StreamingFIFO_36/ap_clk] [get_bd_pins StreamingFIFO_37/ap_clk] [get_bd_pins StreamingFIFO_38/ap_clk] [get_bd_pins StreamingFIFO_4/ap_clk] [get_bd_pins StreamingFIFO_40/ap_clk] [get_bd_pins StreamingFIFO_44/ap_clk] [get_bd_pins StreamingFIFO_45/ap_clk] [get_bd_pins StreamingFIFO_47/ap_clk] [get_bd_pins StreamingFIFO_7/ap_clk] [get_bd_pins StreamingFIFO_8/ap_clk] [get_bd_pins StreamingMaxPool_Batch_0/ap_clk] [get_bd_pins StreamingMaxPool_Batch_1/ap_clk] [get_bd_pins StreamingMaxPool_Batch_2/ap_clk] [get_bd_pins StreamingMaxPool_Batch_3/ap_clk] [get_bd_pins StreamingMaxPool_Batch_4/ap_clk] [get_bd_pins StreamingMaxPool_Batch_5/ap_clk] [get_bd_pins StreamingMaxPool_Batch_6/ap_clk] [get_bd_pins Thresholding_Batch_0/ap_clk]
-  connect_bd_net -net ap_rst_n_0_1 [get_bd_pins ap_rst_n] [get_bd_pins ConvolutionInputGenerator_0/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_1/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_2/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_3/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_4/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_5/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_6/ap_rst_n] [get_bd_pins FMPadding_Batch_0/ap_rst_n] [get_bd_pins FMPadding_Batch_1/ap_rst_n] [get_bd_pins FMPadding_Batch_2/ap_rst_n] [get_bd_pins FMPadding_Batch_3/ap_rst_n] [get_bd_pins FMPadding_Batch_4/ap_rst_n] [get_bd_pins FMPadding_Batch_5/ap_rst_n] [get_bd_pins FMPadding_Batch_6/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_0/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_1/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_10/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_11/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_12/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_13/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_14/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_15/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_16/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_17/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_18/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_19/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_2/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_20/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_21/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_22/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_3/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_4/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_5/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_6/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_7/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_8/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_9/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_0/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_1/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_2/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_3/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_4/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_5/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_6/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_7/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_8/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_9/ap_rst_n] [get_bd_pins StreamingFIFO_0/ap_rst_n] [get_bd_pins StreamingFIFO_1/ap_rst_n] [get_bd_pins StreamingFIFO_10/ap_rst_n] [get_bd_pins StreamingFIFO_12/ap_rst_n] [get_bd_pins StreamingFIFO_15/ap_rst_n] [get_bd_pins StreamingFIFO_16/ap_rst_n] [get_bd_pins StreamingFIFO_17/ap_rst_n] [get_bd_pins StreamingFIFO_19/ap_rst_n] [get_bd_pins StreamingFIFO_2/ap_rst_n] [get_bd_pins StreamingFIFO_22/ap_rst_n] [get_bd_pins StreamingFIFO_23/ap_rst_n] [get_bd_pins StreamingFIFO_24/ap_rst_n] [get_bd_pins StreamingFIFO_26/ap_rst_n] [get_bd_pins StreamingFIFO_29/ap_rst_n] [get_bd_pins StreamingFIFO_30/ap_rst_n] [get_bd_pins StreamingFIFO_31/ap_rst_n] [get_bd_pins StreamingFIFO_33/ap_rst_n] [get_bd_pins StreamingFIFO_36/ap_rst_n] [get_bd_pins StreamingFIFO_37/ap_rst_n] [get_bd_pins StreamingFIFO_38/ap_rst_n] [get_bd_pins StreamingFIFO_4/ap_rst_n] [get_bd_pins StreamingFIFO_40/ap_rst_n] [get_bd_pins StreamingFIFO_44/ap_rst_n] [get_bd_pins StreamingFIFO_45/ap_rst_n] [get_bd_pins StreamingFIFO_47/ap_rst_n] [get_bd_pins StreamingFIFO_7/ap_rst_n] [get_bd_pins StreamingFIFO_8/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_0/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_1/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_2/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_3/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_4/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_5/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_6/ap_rst_n] [get_bd_pins Thresholding_Batch_0/ap_rst_n]
+  connect_bd_net -net ap_clk_0_1 [get_bd_pins ap_clk] [get_bd_pins ConvolutionInputGenerator_0/ap_clk] [get_bd_pins ConvolutionInputGenerator_1/ap_clk] [get_bd_pins ConvolutionInputGenerator_2/ap_clk] [get_bd_pins ConvolutionInputGenerator_3/ap_clk] [get_bd_pins ConvolutionInputGenerator_4/ap_clk] [get_bd_pins ConvolutionInputGenerator_5/ap_clk] [get_bd_pins ConvolutionInputGenerator_6/ap_clk] [get_bd_pins FMPadding_Batch_0/ap_clk] [get_bd_pins FMPadding_Batch_1/ap_clk] [get_bd_pins FMPadding_Batch_2/ap_clk] [get_bd_pins FMPadding_Batch_3/ap_clk] [get_bd_pins FMPadding_Batch_4/ap_clk] [get_bd_pins FMPadding_Batch_5/ap_clk] [get_bd_pins FMPadding_Batch_6/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_0/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_1/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_10/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_11/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_12/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_13/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_14/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_15/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_16/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_17/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_18/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_19/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_2/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_20/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_21/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_22/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_23/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_3/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_4/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_5/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_6/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_7/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_8/ap_clk] [get_bd_pins StreamingDataWidthConverter_Batch_9/ap_clk] [get_bd_pins StreamingFCLayer_Batch_0/ap_clk] [get_bd_pins StreamingFCLayer_Batch_1/ap_clk] [get_bd_pins StreamingFCLayer_Batch_2/ap_clk] [get_bd_pins StreamingFCLayer_Batch_3/ap_clk] [get_bd_pins StreamingFCLayer_Batch_4/ap_clk] [get_bd_pins StreamingFCLayer_Batch_5/ap_clk] [get_bd_pins StreamingFCLayer_Batch_6/ap_clk] [get_bd_pins StreamingFCLayer_Batch_7/ap_clk] [get_bd_pins StreamingFCLayer_Batch_8/ap_clk] [get_bd_pins StreamingFCLayer_Batch_9/ap_clk] [get_bd_pins StreamingFIFO_0/ap_clk] [get_bd_pins StreamingFIFO_1/ap_clk] [get_bd_pins StreamingFIFO_10/ap_clk] [get_bd_pins StreamingFIFO_12/ap_clk] [get_bd_pins StreamingFIFO_15/ap_clk] [get_bd_pins StreamingFIFO_16/ap_clk] [get_bd_pins StreamingFIFO_17/ap_clk] [get_bd_pins StreamingFIFO_19/ap_clk] [get_bd_pins StreamingFIFO_2/ap_clk] [get_bd_pins StreamingFIFO_22/ap_clk] [get_bd_pins StreamingFIFO_23/ap_clk] [get_bd_pins StreamingFIFO_24/ap_clk] [get_bd_pins StreamingFIFO_26/ap_clk] [get_bd_pins StreamingFIFO_29/ap_clk] [get_bd_pins StreamingFIFO_30/ap_clk] [get_bd_pins StreamingFIFO_31/ap_clk] [get_bd_pins StreamingFIFO_33/ap_clk] [get_bd_pins StreamingFIFO_36/ap_clk] [get_bd_pins StreamingFIFO_37/ap_clk] [get_bd_pins StreamingFIFO_38/ap_clk] [get_bd_pins StreamingFIFO_4/ap_clk] [get_bd_pins StreamingFIFO_40/ap_clk] [get_bd_pins StreamingFIFO_44/ap_clk] [get_bd_pins StreamingFIFO_45/ap_clk] [get_bd_pins StreamingFIFO_47/ap_clk] [get_bd_pins StreamingFIFO_6/ap_clk] [get_bd_pins StreamingFIFO_7/ap_clk] [get_bd_pins StreamingFIFO_8/ap_clk] [get_bd_pins StreamingMaxPool_Batch_0/ap_clk] [get_bd_pins StreamingMaxPool_Batch_1/ap_clk] [get_bd_pins StreamingMaxPool_Batch_2/ap_clk] [get_bd_pins StreamingMaxPool_Batch_3/ap_clk] [get_bd_pins StreamingMaxPool_Batch_4/ap_clk] [get_bd_pins StreamingMaxPool_Batch_5/ap_clk] [get_bd_pins StreamingMaxPool_Batch_6/ap_clk] [get_bd_pins Thresholding_Batch_0/ap_clk]
+  connect_bd_net -net ap_rst_n_0_1 [get_bd_pins ap_rst_n] [get_bd_pins ConvolutionInputGenerator_0/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_1/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_2/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_3/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_4/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_5/ap_rst_n] [get_bd_pins ConvolutionInputGenerator_6/ap_rst_n] [get_bd_pins FMPadding_Batch_0/ap_rst_n] [get_bd_pins FMPadding_Batch_1/ap_rst_n] [get_bd_pins FMPadding_Batch_2/ap_rst_n] [get_bd_pins FMPadding_Batch_3/ap_rst_n] [get_bd_pins FMPadding_Batch_4/ap_rst_n] [get_bd_pins FMPadding_Batch_5/ap_rst_n] [get_bd_pins FMPadding_Batch_6/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_0/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_1/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_10/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_11/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_12/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_13/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_14/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_15/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_16/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_17/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_18/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_19/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_2/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_20/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_21/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_22/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_23/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_3/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_4/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_5/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_6/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_7/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_8/ap_rst_n] [get_bd_pins StreamingDataWidthConverter_Batch_9/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_0/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_1/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_2/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_3/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_4/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_5/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_6/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_7/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_8/ap_rst_n] [get_bd_pins StreamingFCLayer_Batch_9/ap_rst_n] [get_bd_pins StreamingFIFO_0/ap_rst_n] [get_bd_pins StreamingFIFO_1/ap_rst_n] [get_bd_pins StreamingFIFO_10/ap_rst_n] [get_bd_pins StreamingFIFO_12/ap_rst_n] [get_bd_pins StreamingFIFO_15/ap_rst_n] [get_bd_pins StreamingFIFO_16/ap_rst_n] [get_bd_pins StreamingFIFO_17/ap_rst_n] [get_bd_pins StreamingFIFO_19/ap_rst_n] [get_bd_pins StreamingFIFO_2/ap_rst_n] [get_bd_pins StreamingFIFO_22/ap_rst_n] [get_bd_pins StreamingFIFO_23/ap_rst_n] [get_bd_pins StreamingFIFO_24/ap_rst_n] [get_bd_pins StreamingFIFO_26/ap_rst_n] [get_bd_pins StreamingFIFO_29/ap_rst_n] [get_bd_pins StreamingFIFO_30/ap_rst_n] [get_bd_pins StreamingFIFO_31/ap_rst_n] [get_bd_pins StreamingFIFO_33/ap_rst_n] [get_bd_pins StreamingFIFO_36/ap_rst_n] [get_bd_pins StreamingFIFO_37/ap_rst_n] [get_bd_pins StreamingFIFO_38/ap_rst_n] [get_bd_pins StreamingFIFO_4/ap_rst_n] [get_bd_pins StreamingFIFO_40/ap_rst_n] [get_bd_pins StreamingFIFO_44/ap_rst_n] [get_bd_pins StreamingFIFO_45/ap_rst_n] [get_bd_pins StreamingFIFO_47/ap_rst_n] [get_bd_pins StreamingFIFO_6/ap_rst_n] [get_bd_pins StreamingFIFO_7/ap_rst_n] [get_bd_pins StreamingFIFO_8/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_0/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_1/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_2/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_3/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_4/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_5/ap_rst_n] [get_bd_pins StreamingMaxPool_Batch_6/ap_rst_n] [get_bd_pins Thresholding_Batch_0/ap_rst_n]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -2356,12 +2428,12 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set m_axis_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis_0 ]
+  set m_axis [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000.000000} \
-   ] $m_axis_0
+   ] $m_axis
 
-  set s_axis_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis_0 ]
+  set s_axis [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000.000000} \
    CONFIG.HAS_TKEEP {0} \
@@ -2373,7 +2445,7 @@ proc create_root_design { parentCell } {
    CONFIG.TDEST_WIDTH {0} \
    CONFIG.TID_WIDTH {0} \
    CONFIG.TUSER_WIDTH {0} \
-   ] $s_axis_0
+   ] $s_axis
 
 
   # Create ports
@@ -2384,8 +2456,8 @@ proc create_root_design { parentCell } {
   create_hier_cell_finn_ip [current_bd_instance .] finn_ip
 
   # Create interface connections
-  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_9_out_V [get_bd_intf_ports m_axis_0] [get_bd_intf_pins finn_ip/m_axis_0]
-  connect_bd_intf_net -intf_net in0_V_0_1 [get_bd_intf_ports s_axis_0] [get_bd_intf_pins finn_ip/s_axis_0]
+  connect_bd_intf_net -intf_net StreamingFCLayer_Batch_9_out_V [get_bd_intf_ports m_axis] [get_bd_intf_pins finn_ip/m_axis_0]
+  connect_bd_intf_net -intf_net in0_V_0_1 [get_bd_intf_ports s_axis] [get_bd_intf_pins finn_ip/s_axis_0]
 
   # Create port connections
   connect_bd_net -net ap_clk_0_1 [get_bd_ports ap_clk] [get_bd_pins finn_ip/ap_clk]
