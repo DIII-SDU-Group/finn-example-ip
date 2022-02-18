@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="fetch_finn_fetch_finn,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=0.790000,HLS_SYN_LAT=3,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=141,HLS_SYN_LUT=199,HLS_VERSION=2020_2}" *)
+(* CORE_GENERATION_INFO="fetch_finn_fetch_finn,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=1.488000,HLS_SYN_LAT=6,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=122,HLS_SYN_LUT=169,HLS_VERSION=2020_2}" *)
 
 module fetch_finn (
         ap_clk,
@@ -35,10 +35,9 @@ module fetch_finn (
         interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 4'd1;
-parameter    ap_ST_fsm_state2 = 4'd2;
-parameter    ap_ST_fsm_state3 = 4'd4;
-parameter    ap_ST_fsm_state4 = 4'd8;
+parameter    ap_ST_fsm_state1 = 3'd1;
+parameter    ap_ST_fsm_state2 = 3'd2;
+parameter    ap_ST_fsm_state3 = 3'd4;
 parameter    C_S_AXI_AXI_CPU_DATA_WIDTH = 32;
 parameter    C_S_AXI_AXI_CPU_ADDR_WIDTH = 5;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -48,7 +47,7 @@ parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
 input   ap_rst_n;
-input  [31:0] finn_stream_V_TDATA;
+input  [7:0] finn_stream_V_TDATA;
 input   finn_stream_V_TVALID;
 output   finn_stream_V_TREADY;
 input   s_axi_AXI_CPU_AWVALID;
@@ -74,30 +73,23 @@ output   interrupt;
 wire    ap_start;
 reg    ap_done;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
-reg   [1:0] res_out_address0;
+wire   [1:0] res_out_address0;
 reg    res_out_ce0;
 reg    res_out_we0;
-reg   [7:0] res_out_d0;
 reg    finn_stream_V_TDATA_blk_n;
-reg   [6:0] tmp_1_reg_180;
-reg   [6:0] tmp_2_reg_185;
-wire   [6:0] trunc_ln14_fu_152_p1;
-reg   [6:0] trunc_ln14_reg_190;
 wire    ap_CS_fsm_state2;
+wire   [0:0] icmp_ln10_fu_97_p2;
+wire   [2:0] add_ln10_fu_91_p2;
+reg    ap_block_state2;
+reg   [2:0] i_reg_80;
+wire   [63:0] i_cast_fu_103_p1;
 wire    ap_CS_fsm_state3;
-wire    ap_CS_fsm_state4;
-reg    ap_block_state1;
-wire   [7:0] and_ln_fu_123_p3;
-wire   [7:0] and_ln1_fu_156_p3;
-wire   [7:0] and_ln2_fu_164_p3;
-wire   [7:0] shl_ln_fu_172_p3;
-wire   [6:0] tmp_fu_113_p4;
-reg   [3:0] ap_NS_fsm;
+reg   [2:0] ap_NS_fsm;
 wire    regslice_both_finn_stream_V_U_apdone_blk;
-wire   [31:0] finn_stream_V_TDATA_int_regslice;
+wire   [7:0] finn_stream_V_TDATA_int_regslice;
 wire    finn_stream_V_TVALID_int_regslice;
 reg    finn_stream_V_TREADY_int_regslice;
 wire    regslice_both_finn_stream_V_U_ack_in;
@@ -105,7 +97,7 @@ wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 4'd1;
+#0 ap_CS_fsm = 3'd1;
 end
 
 fetch_finn_AXI_CPU_s_axi #(
@@ -135,7 +127,7 @@ AXI_CPU_s_axi_U(
     .res_out_address0(res_out_address0),
     .res_out_ce0(res_out_ce0),
     .res_out_we0(res_out_we0),
-    .res_out_d0(res_out_d0),
+    .res_out_d0(finn_stream_V_TDATA_int_regslice),
     .ap_start(ap_start),
     .interrupt(interrupt),
     .ap_ready(ap_ready),
@@ -144,7 +136,7 @@ AXI_CPU_s_axi_U(
 );
 
 fetch_finn_regslice_both #(
-    .DataWidth( 32 ))
+    .DataWidth( 8 ))
 regslice_both_finn_stream_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
@@ -166,15 +158,15 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state1)) begin
-        tmp_1_reg_180 <= {{finn_stream_V_TDATA_int_regslice[22:16]}};
-        tmp_2_reg_185 <= {{finn_stream_V_TDATA_int_regslice[14:8]}};
-        trunc_ln14_reg_190 <= trunc_ln14_fu_152_p1;
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+        i_reg_80 <= 3'd0;
+    end else if ((~((icmp_ln10_fu_97_p2 == 1'd0) & (finn_stream_V_TVALID_int_regslice == 1'b0)) & (icmp_ln10_fu_97_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        i_reg_80 <= add_ln10_fu_91_p2;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -190,7 +182,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -198,7 +190,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+    if (((icmp_ln10_fu_97_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         finn_stream_V_TDATA_blk_n = finn_stream_V_TVALID_int_regslice;
     end else begin
         finn_stream_V_TDATA_blk_n = 1'b1;
@@ -206,7 +198,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((finn_stream_V_TVALID_int_regslice == 1'b0) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if ((~((icmp_ln10_fu_97_p2 == 1'd0) & (finn_stream_V_TVALID_int_regslice == 1'b0)) & (icmp_ln10_fu_97_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         finn_stream_V_TREADY_int_regslice = 1'b1;
     end else begin
         finn_stream_V_TREADY_int_regslice = 1'b0;
@@ -214,21 +206,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        res_out_address0 = 64'd3;
-    end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        res_out_address0 = 64'd2;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        res_out_address0 = 64'd1;
-    end else if ((1'b1 == ap_CS_fsm_state1)) begin
-        res_out_address0 = 64'd0;
-    end else begin
-        res_out_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state4) | (~((finn_stream_V_TVALID_int_regslice == 1'b0) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((~((icmp_ln10_fu_97_p2 == 1'd0) & (finn_stream_V_TVALID_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state2))) begin
         res_out_ce0 = 1'b1;
     end else begin
         res_out_ce0 = 1'b0;
@@ -236,21 +214,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        res_out_d0 = shl_ln_fu_172_p3;
-    end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        res_out_d0 = and_ln2_fu_164_p3;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        res_out_d0 = and_ln1_fu_156_p3;
-    end else if ((1'b1 == ap_CS_fsm_state1)) begin
-        res_out_d0 = and_ln_fu_123_p3;
-    end else begin
-        res_out_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state4) | (~((finn_stream_V_TVALID_int_regslice == 1'b0) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((~((icmp_ln10_fu_97_p2 == 1'd0) & (finn_stream_V_TVALID_int_regslice == 1'b0)) & (icmp_ln10_fu_97_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         res_out_we0 = 1'b1;
     end else begin
         res_out_we0 = 1'b0;
@@ -260,19 +224,22 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~((finn_stream_V_TVALID_int_regslice == 1'b0) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            ap_NS_fsm = ap_ST_fsm_state3;
+            if ((~((icmp_ln10_fu_97_p2 == 1'd0) & (finn_stream_V_TVALID_int_regslice == 1'b0)) & (icmp_ln10_fu_97_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else if ((~((icmp_ln10_fu_97_p2 == 1'd0) & (finn_stream_V_TVALID_int_regslice == 1'b0)) & (icmp_ln10_fu_97_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end
         end
         ap_ST_fsm_state3 : begin
-            ap_NS_fsm = ap_ST_fsm_state4;
-        end
-        ap_ST_fsm_state4 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -281,11 +248,7 @@ always @ (*) begin
     endcase
 end
 
-assign and_ln1_fu_156_p3 = {{tmp_1_reg_180}, {1'd0}};
-
-assign and_ln2_fu_164_p3 = {{tmp_2_reg_185}, {1'd0}};
-
-assign and_ln_fu_123_p3 = {{tmp_fu_113_p4}, {1'd0}};
+assign add_ln10_fu_91_p2 = (i_reg_80 + 3'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -293,10 +256,8 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
-assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
-
 always @ (*) begin
-    ap_block_state1 = ((finn_stream_V_TVALID_int_regslice == 1'b0) | (ap_start == 1'b0));
+    ap_block_state2 = ((icmp_ln10_fu_97_p2 == 1'd0) & (finn_stream_V_TVALID_int_regslice == 1'b0));
 end
 
 always @ (*) begin
@@ -305,10 +266,10 @@ end
 
 assign finn_stream_V_TREADY = regslice_both_finn_stream_V_U_ack_in;
 
-assign shl_ln_fu_172_p3 = {{trunc_ln14_reg_190}, {1'd0}};
+assign i_cast_fu_103_p1 = i_reg_80;
 
-assign tmp_fu_113_p4 = {{finn_stream_V_TDATA_int_regslice[30:24]}};
+assign icmp_ln10_fu_97_p2 = ((i_reg_80 == 3'd4) ? 1'b1 : 1'b0);
 
-assign trunc_ln14_fu_152_p1 = finn_stream_V_TDATA_int_regslice[6:0];
+assign res_out_address0 = i_cast_fu_103_p1;
 
 endmodule //fetch_finn
